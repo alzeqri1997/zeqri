@@ -3,6 +3,8 @@
 }
 
 .hero{
+  position: relative;
+  z-index: 100px;
   padding-top: 131px;
   padding-bottom: 200px;
   display: flex;
@@ -35,36 +37,42 @@
 
 }
 .dots{
+  z-index:10px;
   position: absolute;
   left: 60px;
   top: 176px;
 }
 
 .circle{
+  z-index:10px;
   position: absolute;
   left: 470px;
   top: 128px;
 }
 
 .spiral{
+  z-index:10px;
   position: absolute;
   left: 908px;
   top: 220px;
 }
 
 .lined-circle{
+  z-index:10px;
   position: absolute;
   bottom: 22px;
 right: 130px;
 }
 
 .heart{
+  z-index:10px;
   position: absolute;
   bottom: 176px;
   right: 660px;
 }
 
 .scroll{
+  z-index:10px;
   position: absolute;
   left: 50%;
   bottom: 20px;
