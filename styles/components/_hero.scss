@@ -1,0 +1,13 @@
+.hero{
+  display: flex;
+  &__heading{
+    margin-top: 4px;
+    margin-bottom: 14px;
+  }
+  .attention{
+    font-size: inherit;
+    color: var(--primary-color);
+  }
+
+
+}
