@@ -104,7 +104,7 @@ const Hero = () => {
     <section className=''>
       <div className='container'>
         <div className='hero' >
-          <div className='' >
+          <div className='hero__left-side' >
             <span className='hero__sub-heading sub-heading'>Hello There! <WaveIcon />  </span>
             <h1 className='hero__heading heading1' >I am a Front-End Developer & UI Designer who loves <span className='attention' >Coding</span> and <span className='attention' >Designing</span></h1>
             <span className=' hero__text content' >My Area of focus involves developing and designing responsive stunning websites that are as simple and easy to use as possible.</span>
