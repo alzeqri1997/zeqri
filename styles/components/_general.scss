@@ -1,0 +1,23 @@
+.relative{
+  position: relative;
+}
+
+.z-10{
+  z-index: 10;
+}
+
+.z-full{
+  z-index: 999999999;
+}
+
+.light-bg{
+  background-color: var(--light-bg-color);
+}
+
+// .fit-content{
+//   width: fit-content;
+// }
+
+// .w-full{
+//   width: 100%;
+// }

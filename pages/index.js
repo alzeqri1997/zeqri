@@ -12,8 +12,10 @@ export default function Home() {
       </Head>
 
       <main >
-        <Header />
-        <Hero/>
+        <div className='relative light-bg' >
+          <Header />
+          <Hero/>
+        </div>
       </main>
     </div>
   )
