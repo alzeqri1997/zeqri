@@ -1,0 +1,46 @@
+.card{
+  display: flex;
+  position: relative;
+  gap: 18px;
+  background-color: var(--light-bg-color);
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 14px;
+  flex-basis: 100%;
+
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:10px ;
+    height: 100%;
+    background-color: var(--secondary-color);
+  }
+
+  &__image{
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__content{
+    &--title{
+      display: block;
+      color: var(--primary-color);
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    &--body{
+      color: #D5E3F6;
+      font-size: 2.4rem;
+      line-height: 36px;
+    }
+  }
+
+  .imageBG{
+    position: absolute;
+    right: 0;
+  }
+}
