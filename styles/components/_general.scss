@@ -14,10 +14,18 @@
   background-color: var(--light-bg-color);
 }
 
-// .fit-content{
-//   width: fit-content;
-// }
+.top-pattern{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bottom-pattern{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(-1);
+}
 
-// .w-full{
-//   width: 100%;
-// }
+.hidden{
+  overflow: hidden;
+}
