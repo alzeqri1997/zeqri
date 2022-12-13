@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Divider from '../components/Divider'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import { Pattern } from '../components/icons'
 import Projects from '../components/Projects'
 import WhatIDo from '../components/WhatIDo'
 
@@ -21,9 +22,11 @@ export default function Home() {
         </div>
         <Divider text={'What I do exactly'} />
         <WhatIDo/>
-        <Divider text={'Some of Things I’ve Built'} />
-        <div className='light-bg' >
+        <Divider text={"Some of Things I’ve Built"} />
+        <div className='light-bg relative hidden' >
+          <Pattern classes={'top-pattern'}/>
           <Projects />
+          <Pattern classes={'bottom-pattern'}/>
         </div>
       </main>
     </div>
