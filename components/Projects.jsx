@@ -3,8 +3,8 @@ import Project from './Project'
 
 const Projects = () => {
   return (
-    <section className='projects container' >
-      <Project/>
+    <section className='projects container relative' >
+      <Project />
     </section>
   )
 }

@@ -4,10 +4,10 @@ import paintSM from "./assets/images/paint.png"
 import paintBG from "./assets/images/paintBG.png"
 import nerd from "./assets/images/nerd.png"
 import nerdBG from "./assets/images/nerdBG.png"
-import { Behance, Github } from "./components/icons"
-import halabkImage from './assets/images/projects/HalaBK.png'
-import titanex from './assets/images/projects/Titanex.png'
-import lunBread from './assets/images/projects/lunbread.png'
+import halabkImage from "./assets/images/projects/HalaBK.png"
+import titanex from "./assets/images/projects/Titanex.png"
+import lunBread from "./assets/images/projects/lunbread.png"
+import rentalHome from "./assets/images/projects/rentalHomeCaseStudy.png"
 
 export const cards = [
 	{
@@ -25,9 +25,9 @@ export const cards = [
 ]
 
 export const projectDetails = [
-  {
-    imageRight: false,
-    image: halabkImage.src,
+	{
+		imageRight: false,
+		image: halabkImage.src,
 		badge: "Web Development",
 		title: "Halabk Service Provider Dashboard",
 		body: `
@@ -36,17 +36,17 @@ export const projectDetails = [
           <p>My role was building the <strong>provider dashboard.</strong></p>
           <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
     `,
-    link: '#',
-    icons: [
-      {
-        icon: Behance,
-        link: '#'
-      }
-    ]
+		link: "#",
+		icons: [
+			{
+				icon: "Behance",
+				link: "#",
+			},
+		],
 	},
-  {
-    imageRight: true,
-    image:titanex.src,
+	{
+		imageRight: true,
+		image: titanex.src,
 		badge: "Web Design & Web Development",
 		title: "Titanex Landing page",
 		body: `
@@ -54,16 +54,54 @@ export const projectDetails = [
           <p>My Role was <strong>designing</strong> a responsive landing page and <strong>developing</strong> it</p>
           <p>Stack Used: <strong>Figma, ReactJS, TailwindCSS</strong></p>
     `,
-    link: '#',
-    icons: [
-      {
-        icon: Behance,
-        link: '#'
-      },
-      {
-        icon: Github,
-        link: '#'
-      }
-    ]
+		link: "#",
+		icons: [
+			{
+				icon: "Behance",
+				link: "#",
+			},
+			{
+				icon: "Github",
+				link: "#",
+			},
+		],
+	},
+	{
+		imageRight: false,
+		image: rentalHome.src,
+		badge: "Case Study",
+		title: "Rental Home Website",
+		body: `
+    <p><strong>Rental home</strong>  is  a website that connects between users who is looking for place to live in such as house, or <br> 
+    apartment and the property owner.</p>
+    <p>My role was designing the <strong>The website.</strong></p>
+    `,
+		link: "#",
+		icons: [
+			{
+				icon: "Behance",
+				link: "#",
+			},
+		],
+	},
+	{
+		imageRight: true,
+		image: lunBread.src,
+		badge: "Mobile Design",
+		title: "LunBread Mobile Application",
+		body: `
+    <p><strong>Lunbread</strong> is a bakery app that allows users to quickly order their favorite backed <br>
+    goods, sandwiches, pastry and cakes that skip in-line food ordering by using our app</p>
+    <p>My Role was User <strong> Research, Personas, Wireframes, <br>
+    Prototyping, and User Testing. </strong></p>
+    <p>Stack Used: <strong> Figma</strong></p>
+    `,
+		link: "#",
+		icons: [
+			{
+				icon: "Behance",
+				link: "#",
+			},
+		],
 	},
 ]

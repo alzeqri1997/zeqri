@@ -1,5 +1,8 @@
 .projects{
 
+  padding-top: 100px;
+  padding-bottom: 30px;
+
   .left-side{
     text-align: end;
     justify-content: flex-start;
@@ -23,8 +26,19 @@
     position: relative;
     display: flex;
     gap: 30px;
+    margin-bottom: 80px;
 
 
+    &__img{
+      border: 1px  solid var(--secondary-color);
+      border-radius: 10px;
+      transition: all .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+      &:hover{
+        z-index: 100;
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+    }
     &__content{
       &--badge{
         display: block;
