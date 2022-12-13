@@ -1,6 +1,7 @@
 /** @format */
 
 import Head from "next/head"
+import { AboutMe } from "../components/AboutMe"
 import ContactMe from "../components/ContactMe"
 import Divider from "../components/Divider"
 import Header from "../components/Header"
@@ -36,6 +37,8 @@ export default function Home() {
 				</div>
 				<Divider text={"Contact Me"} />
 				<ContactMe />
+				<Divider text={"About Me"} />
+				<AboutMe/>
 			</main>
 		</div>
 	)

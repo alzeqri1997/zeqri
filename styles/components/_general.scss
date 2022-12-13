@@ -26,6 +26,18 @@
   transform: scale(-1);
 }
 
+.right-pattern{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.left-pattern{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(-1);
+}
+
 .hidden{
   overflow: hidden;
 }
