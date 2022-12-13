@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const ContactMe = () => {
@@ -18,18 +19,18 @@ const ContactMe = () => {
       <span className='contact-me__sub-heading' >I'm currently available to take on new projects, so feel free to contact with me <br />
         so we can talk about everything related to your project.</span>
       <div className='contact-me__info' >
-        <div className='contact-card' >
+        <Link target={'_blank'} href='https://join.skype.com/invite/FlBkIW6Xa4Mt' className='contact-card' >
           {Skype}
-          <a target={'_blank'} href='https://join.skype.com/invite/FlBkIW6Xa4Mt'>@alzeqri</a>
-        </div>
-        <div className='contact-card' >
+          <span >@alzeqri</span>
+        </Link>
+        <Link href='mailto:ahmed3052999@gmail.com' className='contact-card' >
           {Gmail}
-          <a href='mailto:ahmed3052999@gmail.com'>ahmed3052999@gmail.com</a>
-        </div>
-        <div className='contact-card' >
+          <span >ahmed3052999@gmail.com</span>
+        </Link>
+        <Link target={'_blank'} href='https://t.me/Alzeqri' className='contact-card' >
           {Telegram}
-          <a target={'_blank'} href='https://t.me/Alzeqri'>@alzeqri</a>
-        </div>
+          <span>@alzeqri</span>
+        </Link>
       </div>
     </section>
   )
