@@ -1,9 +1,10 @@
 /** @format */
 
 import Head from "next/head"
-import { AboutMe } from "../components/AboutMe"
+import  AboutMe  from "../components/AboutMe"
 import ContactMe from "../components/ContactMe"
 import Divider from "../components/Divider"
+import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import { Pattern } from "../components/icons"
@@ -38,7 +39,8 @@ export default function Home() {
 				<Divider text={"Contact Me"} />
 				<ContactMe />
 				<Divider text={"About Me"} />
-				<AboutMe/>
+				<AboutMe />
+				<Footer/>
 			</main>
 		</div>
 	)
