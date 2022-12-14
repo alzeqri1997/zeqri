@@ -9,10 +9,9 @@ const Header = () => {
 
       <div className='navs' >
         <ul className='navs__nav-items ' >
-          <li ><a className='navs__nav-items--item' href="#">Home</a></li>
-          <li ><a className='navs__nav-items--item' href="#">Work</a></li>
-          <li ><a className='navs__nav-items--item' href="#">About</a></li>
-          <li ><a className='navs__nav-items--item' href="#">Contact</a></li>
+          <li ><a className='navs__nav-items--item' href="#work">Projects</a></li>
+          <li ><a className='navs__nav-items--item' href="#about">About</a></li>
+          <li ><a className='navs__nav-items--item' href="#contact">Contact Me</a></li>
         </ul>
         <Button rounded classes  text={'Resume'}  />
       </div>

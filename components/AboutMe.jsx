@@ -4,10 +4,9 @@ import myPic from '../assets/images/myPic.png'
 import {  LinkedIn, Pattern2, Twitter} from './icons'
 
 
-export const AboutMe = () => {
-  console.log('ahmed', myPic.src)
+const AboutMe = () => {
   return (
-    <section className='light-bg relative'>
+    <section id='about' className='light-bg relative hidden'>
       <div className='container about-me' >
         <div className='about-me__content'>
           <h1 className='about-me__content--heading'>A Few Words About me</h1>
@@ -26,9 +25,11 @@ export const AboutMe = () => {
             </div>
         </div>
         <img className='about-me__img' src={myPic.src} alt="about me ahmed alzagri" />
+      </div>
       <Pattern2 classes={'right-pattern'} />
       <Pattern2 classes={'left-pattern'} />
-      </div>
     </section>
   )
 }
+
+export default AboutMe

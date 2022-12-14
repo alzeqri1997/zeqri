@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import React, {useEffect, useRef, useState} from 'react'
-import projectImage from '../assets/images/projects/HalaBK.png'
-import projectImage2 from '../assets/images/projects/Titanex.png'
 import Button from './Button'
 import { Behance, Github } from './icons'
 import { projectDetails } from '../content'
@@ -14,7 +12,6 @@ const Project = () => {
 
     useEffect(() => {
       const { current } = projectBody
-      console.log(current.clientHeight)
       setProjectBodyHight(current.clientHeight)
     })
     return (
@@ -26,7 +23,7 @@ const Project = () => {
         <div dangerouslySetInnerHTML={{ __html: body }} ref={projectBody} className='project__content--body' ></div>
         <div style={{ marginTop: `${projectBodyHight + 40}px` }} className='project__content--cta' >
           <Button text={'See the Result'} isWithIcon={true} />
-          <div className="icons">{icons.map(item => (<Link href={item.link} > {item.icon === 'Behance' ? Behance : Github} </Link>))}</div>
+          <div className="icons">{icons.map((item, index) => (<Link key={index} href={item.link} > {item.icon === 'Behance' ? <Behance/> : <Github/>}</Link>))}</div>
         </div>
       </div>
     </div>
@@ -37,8 +34,8 @@ const Project = () => {
 
   return (
     
-      projectDetails.map(item => (
-      <ProjectItem item={item}  />
+      projectDetails.map((item, index) => (
+      <ProjectItem key={index} item={item}  />
       ))
     
   )

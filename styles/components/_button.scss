@@ -1,17 +1,36 @@
 .rounded-button{
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
+
+  &:hover{
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+  }
 }
 
 .full-button{
   background-color: var(--primary-color);
   color: var(--bg-color);
-  font-weight: bold;
+  border: 1px solid var(--primary-color);
+
+  &:hover{
+    border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: unset;
+
+  svg{
+    path{
+      stroke:var(--primary-color) ;
+    }
+  }
+  }
 }
 
 .button{
-  padding: 10px 20px 6px 20px;
+  font-weight: bold;
+  padding: 9px 20px 5px 20px;
   border-radius: 10px;
   line-height: 25px;
   font-size: 1.8rem;
+  transition: all .3s;
 }

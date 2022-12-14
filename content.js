@@ -13,7 +13,7 @@ export const cards = [
 	{
 		imageSM: paintSM.src,
 		imageBG: paintBG.src,
-		title: "High-quality UI Design or Redesign",
+		title: "High-quality UI Design or Re-design",
 		body: "in the shortest possible time. I will help you make your product perfectly useable with actionable suggestions for improvement.",
 	},
 	{

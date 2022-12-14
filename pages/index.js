@@ -1,5 +1,3 @@
-/** @format */
-
 import Head from "next/head"
 import  AboutMe  from "../components/AboutMe"
 import ContactMe from "../components/ContactMe"
