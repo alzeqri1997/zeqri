@@ -1,6 +1,12 @@
+@use '../breakpoints' as *;
+
 .footer{
   margin-top: 62px;
   margin-bottom: 30px;
+
+  @include breakpoint('small'){
+    margin-top: 40px;;
+  }
   &__info{
     display: flex;
     align-items: center;

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Divider from './Divider'
 
 const ContactMe = () => {
   const Gmail = <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,8 +15,9 @@ const ContactMe = () => {
   </svg>
   
   return (
-    <section className='container contact-me ' >
-      <h1 className='contact-me__heading' > Let's Work Together' </h1>
+    <section id="contact" className='container contact-me ' >
+				<Divider text={"Contact Me"} />
+      <h1 className='contact-me__heading' > Let's Work Together </h1>
       <span className='contact-me__sub-heading' >I'm currently available to take on new projects, so feel free to contact with me <br />
         so we can talk about everything related to your project.</span>
       <div className='contact-me__info' >

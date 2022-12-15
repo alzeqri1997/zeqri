@@ -1,11 +1,22 @@
+@use '../breakpoints' as *;
+
 .about-me{
   display: flex;
+  z-index: 10;
+
   justify-content: center;
   gap: 34px;
   padding-top: 100px;
   padding-bottom: 100px;
   overflow: hidden;
-
+  
+  @include breakpoint('large'){
+    flex-direction: column;
+  }
+  @include breakpoint('small'){
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   &__content{
     
     &--heading{
@@ -27,6 +38,10 @@
       display: flex;
       gap: 24px;
     }
+  }
+
+  &__img{
+    width: fit-content;
   }
 
 }

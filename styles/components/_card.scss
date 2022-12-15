@@ -1,3 +1,5 @@
+@use '../breakpoints' as *;
+
 .card{
   display: flex;
   position: relative;
@@ -6,6 +8,13 @@
   padding: 28px 32px;
   overflow: hidden;
   border-radius: 14px;
+  @include breakpoint('medium'){
+    flex-direction: column;
+    padding: 20px 25px;
+    &::before{
+      width: 5px !important;
+    }
+  }
   flex-basis: 100%;
 
   &::before{
@@ -24,6 +33,8 @@
   }
 
   &__content{
+    position: relative;
+    z-index: 10;
     &--title{
       display: block;
       color: var(--primary-color);
@@ -42,5 +53,6 @@
   .imageBG{
     position: absolute;
     right: 0;
+    bottom: 0;
   }
 }

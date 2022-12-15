@@ -1,3 +1,5 @@
+@use '../breakpoints' as *;
+
 .sub-heading{
   font-size:3.2rem ;
   color: var(--text-color);
@@ -8,6 +10,16 @@
 .heading1{
   font-size: 6.4rem;
   line-height: 7.7rem;
+
+  @include customBreakpoint('1200px'){
+    font-size: 5rem;
+    line-height: 6.2rem;
+  }
+  
+  @include breakpoint('medium'){
+    font-size: 4rem;
+    line-height: 5rem;
+  }
 }
 
 .content{

@@ -26,17 +26,17 @@ export default function Home() {
 					<Header />
 					<Hero />
 				</div>
-				<Divider text={"What I do exactly"} />
+				
 				<WhatIDo />
-				<Divider text={"Some of Things I’ve Built"} />
-				<div className="light-bg relative hidden">
+				{/* <Divider text={"Some of Things I’ve Built"} /> */}
+				<div className="light-bg relative">
 					<Pattern classes={"top-pattern"} />
 					<Projects />
 					<Pattern classes={"bottom-pattern"} />
 				</div>
-				<Divider text={"Contact Me"} />
+				{/* <Divider text={"Contact Me"} /> */}
 				<ContactMe />
-				<Divider text={"About Me"} />
+				{/* <Divider text={"About Me"} /> */}
 				<AboutMe />
 				<Footer/>
 			</main>
