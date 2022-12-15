@@ -1,7 +1,6 @@
 import Head from "next/head"
 import  AboutMe  from "../components/AboutMe"
 import ContactMe from "../components/ContactMe"
-import Divider from "../components/Divider"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
@@ -28,15 +27,12 @@ export default function Home() {
 				</div>
 				
 				<WhatIDo />
-				{/* <Divider text={"Some of Things I’ve Built"} /> */}
 				<div className="light-bg relative">
 					<Pattern classes={"top-pattern"} />
 					<Projects />
 					<Pattern classes={"bottom-pattern"} />
 				</div>
-				{/* <Divider text={"Contact Me"} /> */}
 				<ContactMe />
-				{/* <Divider text={"About Me"} /> */}
 				<AboutMe />
 				<Footer/>
 			</main>
