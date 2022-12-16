@@ -8,6 +8,9 @@ import { Pattern } from "../components/icons"
 import Projects from "../components/Projects"
 import WhatIDo from "../components/WhatIDo"
 
+
+
+
 export default function Home() {
 	return (
 		<div>
@@ -20,7 +23,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main>
+			<main >
 				<div className="relative light-bg">
 					<Header />
 					<Hero />
