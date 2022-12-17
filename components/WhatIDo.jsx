@@ -17,7 +17,7 @@ const WhatIDo = () => {
         .timeline({ defaults: { duration: 0.5 }, scrollTrigger: {
           trigger: '.card',
           start: 'top center',
-          markers: true
+          // toggleActions: "restart none none reset"
         }})
         .from('.card', {
           opacity: 0,
