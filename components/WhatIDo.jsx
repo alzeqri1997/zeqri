@@ -3,27 +3,37 @@ import Card from './Card'
 import { cards } from '../content'
 import Divider from './Divider'
 import { gsap } from 'gsap';
+import  ScrollTrigger  from 'gsap/dist/ScrollTrigger';
 
 
 const WhatIDo = () => {
+  gsap.registerPlugin(ScrollTrigger)
   const tl = useRef();
   const whatIDo = useRef();
-
+  
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       tl.current = gsap
-        .timeline({ defaults: { duration: 0.8 } })
+        .timeline({ defaults: { duration: 0.5 }, scrollTrigger: {
+          trigger: '.card',
+          start: 'top center',
+          markers: true
+        }})
         .from('.card', {
           opacity: 0,
+          transformOrigin: 'left center',
           duration: 0.5,
-          stagger: 0.5,
-          y: 30
+          x: function (index) {
+            if (index % 2 === 0) return -300
+            else return 300
+          },
+          scale: 1.5,
         })
         .from('.card__image', {
           opacity: 0,
           duration: 0.5,
-          y: 30
-        }, "<")
+          y: 30,
+        }, "-=")
         .from('.card__content--body', {
           opacity: 0,
           duration: 0.5,
@@ -33,7 +43,7 @@ const WhatIDo = () => {
           y: 0,
           stagger: 0.03,
           delay: 0.2,
-          duration: .4
+          duration: .4,
         }, "<")
         .from('.imageBG', {
           duration: 2,
