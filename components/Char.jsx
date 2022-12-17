@@ -2,7 +2,6 @@ import React from 'react'
 
 const Char = ({children, charClass = ''}) => {
   const chars = children.split('');
-  console.log('chars',chars)
   return (
     chars.map((char, index) => {
       if (char === ' ') return ' ';

@@ -1,58 +1,67 @@
-@use '../breakpoints' as *;
+/** @format */
 
-.card{
-  display: flex;
-  position: relative;
-  gap: 18px;
-  background-color: var(--light-bg-color);
-  padding: 28px 32px;
-  overflow: hidden;
-  border-radius: 14px;
-  @include breakpoint('medium'){
-    flex-direction: column;
-    padding: 20px 25px;
-    &::before{
-      width: 5px !important;
-    }
-  }
-  flex-basis: 100%;
+@use "../breakpoints" as *;
 
-  &::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width:10px ;
-    height: 100%;
-    background-color: var(--secondary-color);
-  }
+.card {
+	display: flex;
+	position: relative;
+	gap: 18px;
+	background-color: var(--light-bg-color);
+	padding: 28px 32px;
+	overflow: hidden;
+	border-radius: 14px;
+	@include breakpoint("medium") {
+		flex-direction: column;
+		padding: 20px 25px;
+		&::before {
+			width: 5px !important;
+		}
+	}
+	flex-basis: 100%;
 
-  &__image{
-    width: fit-content;
-    height: fit-content;
-  }
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 10px;
+		height: 100%;
+		background-color: var(--secondary-color);
+	}
 
-  &__content{
-    position: relative;
-    z-index: 10;
-    &--title{
-      display: block;
-      color: var(--primary-color);
-      font-size: 2.4rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+	&__image {
+		width: fit-content;
+		height: fit-content;
+	}
 
-    &--body{
-      color: #D5E3F6;
-      font-size: 2.4rem;
-      line-height: 36px;
-    }
-  }
+	&__content {
+		position: relative;
+		z-index: 10;
+		&--title {
+			display: block;
+			color: var(--primary-color);
+			font-size: 2.4rem;
+			font-weight: bold;
+			margin-bottom: 10px;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			&--char {
+				display: inline-block;
+				font-size: inherit;
+				font-weight: inherit;
+				transform: translateY(100px);
+			}
+		}
 
-  .imageBG{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
+		&--body {
+			color: #d5e3f6;
+			font-size: 2.4rem;
+			line-height: 36px;
+		}
+	}
+
+	.imageBG {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
 }

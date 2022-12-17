@@ -134,9 +134,6 @@ const Hero = () => {
           opacity: 0
         }, "<").from('.hero__image svg path', {
           opacity: 0,
-          // ease: "steps(40)",
-          // ease: "circ.out",
-          // y:-10,
           stagger: {
             from: "center",
             amount: 3
