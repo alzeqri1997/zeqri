@@ -3,6 +3,7 @@
 .divider {
 	position: absolute;
 	top: 0;
+	opacity: 0;
 	@include breakpoint("medium") {
 		top: 3px;
 	}
@@ -16,6 +17,7 @@
 	z-index: 10000000;
 
 	&__text {
+		clip-path: inset(0 100% 0 0);
 		text-transform: capitalize;
 		padding-right: 30px;
 		font-size: 4rem;
@@ -28,6 +30,7 @@
 	}
 
 	&__line1 {
+		clip-path: inset(0 100% 0 0);
 		position: absolute;
 		right: calc(100% + 30px);
 		height: 2px;
@@ -37,6 +40,7 @@
 		z-index: 10;
 	}
 	&__line2 {
+		clip-path: inset(0 100% 0 0);
 		height: 2px;
 		width: 100%;
 		transform: scaleX(2);
