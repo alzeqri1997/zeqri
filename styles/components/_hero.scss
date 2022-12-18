@@ -127,4 +127,15 @@ right: 130px;
   position: absolute;
   left: 50%;
   bottom: 50px;
+  .multiple-polygon{
+    opacity: 0.4;
+  }
+  .overlay{
+    path{
+      opacity: 0;
+    }
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
