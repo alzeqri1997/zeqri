@@ -7,6 +7,7 @@ import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
 const Project = () => {
+  gsap.registerPlugin(ScrollTrigger)
   const project = useRef();
   const projectImage = useRef();
   const content = useRef();
@@ -23,17 +24,6 @@ const Project = () => {
       const overlay = projectImage.current.children['1']
       const image = projectImage.current.children['0']
       const leftSide = project.current.className.split(' ')[1]
-      console.log('leftSide', leftSide)
-      // gsap.fromTo(project.current, {
-      //   opacity: 0,
-      // }, {
-      //   opacity: 1,
-      //   scrollTrigger: {
-      //     trigger: project.current,
-      //     start: "top center",
-      //     markers: true
-      //   }
-      // })
       gsap.timeline({
         scrollTrigger: {
           trigger: project.current,

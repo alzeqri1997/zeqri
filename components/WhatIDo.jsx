@@ -8,12 +8,10 @@ import  ScrollTrigger  from 'gsap/dist/ScrollTrigger';
 
 const WhatIDo = () => {
   gsap.registerPlugin(ScrollTrigger)
-  const tl = useRef();
   const whatIDo = useRef();
-  
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      tl.current = gsap
+      gsap
         .timeline({ defaults: { duration: 0.5 }, scrollTrigger: {
           trigger: '.card',
           start: 'top center',
