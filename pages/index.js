@@ -1,4 +1,5 @@
 import Head from "next/head"
+import React, {useEffect, useState, useLayoutEffect} from 'react'
 import  AboutMe  from "../components/AboutMe"
 import ContactMe from "../components/ContactMe"
 import Footer from "../components/Footer"
@@ -7,11 +8,19 @@ import Hero from "../components/Hero"
 import { Pattern } from "../components/icons"
 import Projects from "../components/Projects"
 import WhatIDo from "../components/WhatIDo"
-
-
+import Loading from "../components/Loading"
 
 
 export default function Home() {
+	const [isLoading, setIsLoading] = useState(false);
+	function demoAsyncCall() {
+		// return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+	}
+	useEffect(() => {
+		// demoAsyncCall().then(() => setIsLoading(false))
+	})
+
+	if(isLoading) return <Loading/>
 	return (
 		<div>
 			<Head>
@@ -30,11 +39,7 @@ export default function Home() {
 				</div>
 				
 				<WhatIDo />
-				<div className="light-bg relative">
-					<Pattern classes={"top-pattern"} />
 					<Projects />
-					<Pattern classes={"bottom-pattern"} />
-				</div>
 				<ContactMe />
 				<AboutMe />
 				<Footer/>
