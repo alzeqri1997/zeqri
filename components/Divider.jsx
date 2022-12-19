@@ -11,7 +11,7 @@ const Divider = ({ text }) => {
     const line2 = dividerRef.current.children[2];
     gsap.timeline({
       defaults: {
-        duration: 0.5
+        duration: 0.5,
       },
       scrollTrigger: {
         trigger: dividerRef.current,
@@ -23,12 +23,12 @@ const Divider = ({ text }) => {
       opacity: 1,
     }).to(line1, {
       delay: .2,
-      clipPath: 'inset(0 100%  0 100%)' 
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' 
     }, "<").to(text, {
-      clipPath: 'inset(0 100%  0 100%)' 
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' 
     }).to(line2, {
       duration:2,
-      clipPath: 'inset(0 100%  0 100%)' 
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' 
     })
   }, [])
   return (
