@@ -1,23 +1,22 @@
 import Head from "next/head"
-import React, {useEffect, useState, useLayoutEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import  AboutMe  from "../components/AboutMe"
 import ContactMe from "../components/ContactMe"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
-import { Pattern } from "../components/icons"
 import Projects from "../components/Projects"
 import WhatIDo from "../components/WhatIDo"
 import Loading from "../components/Loading"
 
 
 export default function Home() {
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 	function demoAsyncCall() {
-		// return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+		return new Promise((resolve) => setTimeout(() => resolve(), 2500));
 	}
 	useEffect(() => {
-		// demoAsyncCall().then(() => setIsLoading(false))
+		demoAsyncCall().then(() => setIsLoading(false))
 	})
 
 	if(isLoading) return <Loading/>
