@@ -18,6 +18,10 @@
 
   &__sub-heading{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    white-space: nowrap;
+    @include breakpoint('small'){
+      white-space:normal;
+    }
     &--char{
       transform: translateY(100px);
       display: inline-block;
@@ -87,7 +91,13 @@
   z-index:10;
   position: absolute;
   left: 60px;
-  top: 176px;
+  bottom: 176px;
+
+  @include breakpoint('small'){
+    left: -130px;
+    top: 126px;
+    bottom: unset;
+  }
 }
 
 .circle{

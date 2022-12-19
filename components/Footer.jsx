@@ -49,16 +49,16 @@ const Footer = () => {
       scale:1
     }, "-=0.5").fromTo(copyright, {
       opacity:0,
-      Y:100
+      y:100
     }, {
       opacity:1,
-      Y: 0
+      y: 0
     })
   }, [])
   
 
   return (
-    <footer ref={footer} className='container footer' >
+    <footer ref={footer} className='container footer hidden'>
       <div className='footer__info' >
         <div className='footer__info--logo' > < Logo /> <span className='footer__info--logo-text' >Zeqri</span>  </div>
         <div className='footer__info--icons' >

@@ -32,7 +32,7 @@ export default function Home() {
 
 	if(isLoading) return <Loading/>
 	return (
-		<div>
+		<>
 			<Head>
 				<title>Zeqri</title>
 				<meta
@@ -54,6 +54,6 @@ export default function Home() {
 				<AboutMe />
 				<Footer/>
 			</main>
-		</div>
+		</>
 	)
 }

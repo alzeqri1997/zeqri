@@ -140,7 +140,7 @@ const Hero = () => {
           opacity: 0,
           scale: 2,
           duration: 1,
-          ease: "bounce.out",
+          ease: "back.out(1.7)",
           stagger: {
             from: "center",
             amount: 1
@@ -167,7 +167,6 @@ const Hero = () => {
     }).to('.scroll .overlay path', {
       transformOrigin:"center",
       keyframes: {
-        // y:[0, 5,0],
         opacity: [0, 1, 0],
         scale:[1,1.1,1],
       },
@@ -182,8 +181,8 @@ const Hero = () => {
       ease:"power1.out",
       scrollTrigger: {
         trigger: '.hero',
-        scrub: true,
-        start: 'top 10%'
+        start: 'top 10%',
+        scrub: 2,
       }
     })
     gsap.to('.hero__left-side', {
@@ -202,11 +201,6 @@ const Hero = () => {
               <div className='heading1 hidden' ><span className='text' >& UI Designer who loves</span></div>
               <div className='heading1 hidden' ><span className='text' ><span className='attention' >Coding</span> and <span className='attention' >Designing</span></span></div>
             </h1>
-            {/* <h1 className='hero__heading heading1' >
-              <Char charClass='hero__heading--char' >I am a Front-End Developer </Char> <br />
-              <Char charClass='hero__heading--char' >& UI Designer who loves </Char> <br />
-              <span className='attention' ><Char charClass='hero__heading--char' >Coding</Char></span> <Char charClass='hero__heading--char'>and</Char> <span className='attention' ><Char charClass='hero__heading--char'>Designing.</Char></span></h1>
-             */}
             <p className='hero__text content' >My Area of focus involves developing and designing responsive stunning websites that are as simple and easy to use as possible.</p>
             <div className='CTA' >
               <Button text={'Contact me'} />
