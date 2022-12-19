@@ -4,57 +4,22 @@ import Button from './Button'
 import { Behance, Github } from './icons'
 import { projectDetails } from '../content'
 import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+// import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
 const Project = () => {
-  gsap.registerPlugin(ScrollTrigger)
-  const project = useRef();
-  const projectImage = useRef();
-  const content = useRef();
   const ProjectItem = (props) => {
+    // gsap.registerPlugin(ScrollTrigger)
+    const project = useRef();
+    const projectImage = useRef();
+    const content = useRef();
     const [projectBodyHight, setProjectBodyHight] = useState(0)
     const projectBody = useRef()
     const { imageRight, image, badge, title, body, link, icons } = props.item
 
     useEffect(() => {
       const { current } = projectBody
-      setProjectBodyHight(current.clientHeight)
+      setProjectBodyHight(current.clientHeight);
     })
-    useLayoutEffect(() => {
-      const overlay = projectImage.current.children['1']
-      const image = projectImage.current.children['0']
-      const leftSide = project.current.className.split(' ')[1]
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: project.current,
-          start: "top 80%",
-        }
-      }).fromTo(project.current, 
-        {
-          opacity: 0,
-          x: function () {
-            return leftSide ? -100 : 100 
-          }
-        }, {
-          opacity: 1,
-          x: 0
-        }
-      ).to(overlay, {
-        duration: 0.65,
-        delay:0.1,
-        x: function () {
-          return leftSide ? "100%" : "-100%"
-        },
-        ease: "power2.out"
-      }, "<").fromTo(image,{
-        scale: 1.2,
-        ease: "power2.out"
-      }, {
-        scale: 1,
-        delay:0.1,
-        ease: "power2.out"
-      }, "<")
-    }, [])
     return (
       <div ref={project} className={`project ${imageRight ? 'left-side' : ''}`}>
         <Link ref={projectImage} className='project__img' href={link} >
