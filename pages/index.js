@@ -13,10 +13,21 @@ import Loading from "../components/Loading"
 export default function Home() {
 	const [isLoading, setIsLoading] = useState(true);
 	function demoAsyncCall() {
-		return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+		return new Promise((resolve) => setTimeout(() => resolve(), 1000));
 	}
 	useEffect(() => {
-		demoAsyncCall().then(() => setIsLoading(false))
+		const onPageLoad = () => {
+			demoAsyncCall().then(()=> setIsLoading(false))
+		}
+		if (document.readyState === 'complete') {
+			console.log('inside readyState')
+			onPageLoad()
+		} else {
+			console.log('inside addEventListener')
+			window.addEventListener('load', onPageLoad);
+
+			return ()=> window.removeEventListener('load', onPageLoad)
+		}
 	})
 
 	if(isLoading) return <Loading/>
