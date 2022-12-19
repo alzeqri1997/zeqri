@@ -22,17 +22,6 @@ const AboutMe = () => {
           trigger: '.about-me',
           start: 'top center',
         }
-      }).fromTo('.about-me__image', {
-        opacity: 0,
-        x: 100,
-      }, {
-        opacity: 1,
-        x:0
-      }, "<").to('.about-me__image--overlay', {
-        duration: 0.65,
-        delay: 0.1,
-        width: 0,
-        ease: "power2.out"
       }).fromTo('.about-me__image-img',{
         scale: 1.2,
       }, {
@@ -64,7 +53,18 @@ const AboutMe = () => {
       }, {
         opacity: 1,
         x: 0
-      }, "-=.5")
+      }, "-=.5").fromTo('.about-me__image', {
+        opacity: 0,
+        x: 100,
+      }, {
+        opacity: 1,
+        x:0
+      }, "<").to('.about-me__image--overlay', {
+        duration: 0.65,
+        delay: 0.1,
+        width: 0,
+        ease: "power2.out"
+      })
     }, aboutMe)
     return () => ctx.revert()
   },[])
