@@ -110,12 +110,6 @@ export const projectDetails = [
     <p>My role was developing the <strong>The website.</strong></p>
     <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
     `,
-		link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
-		icons: [
-			{
-				icon: "Behance",
-				link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
-			},
-		],
+		link: "https://www.wameed.co/en",
 	},
 ]
