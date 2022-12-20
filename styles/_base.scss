@@ -1,18 +1,21 @@
 @use 'breakpoints' as *;
 // fonts
 
-// @font-face {
-//   font-family: "calibre";
-//   src: url(../assets/font/CalibreMedium.otf);
-//   font-weight: normal;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: "calibre";
-//   src: url(../assets/font/CalibreBold.otf);
-//   font-weight: bold;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: "calibre";
+  src: url(../public/assets/fonts/CalibreMedium.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "calibre";
+  src: url(../public/assets/fonts/CalibreBold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "calibre";
+  src: url(../public/assets/fonts/CalibreLight.otf);
+  font-weight: lighter;
+}
 
 // Variables
 
@@ -42,7 +45,6 @@ body {
   @include breakpoint('small'){
     font-size: 50%;
   }
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
