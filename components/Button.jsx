@@ -10,11 +10,11 @@ const Arrow = () => (
   </svg>
   </span>
 )
-const Button = ({ rounded = false, text, classes="", isWithIcon = false, link="#" }) => {
+const Button = ({ rounded = false, text, classes="", isWithIcon = false, link="#", target = '_self' }) => {
   const isRounded = rounded ? 'rounded-button' : 'full-button'
 
   return (
-    <Link href={link} >
+    <Link target={target} href={link} >
       <div className={`${classes} button ${isRounded} `}>
         <span>{text}</span> {isWithIcon && <Arrow />}
       </div>

@@ -38,14 +38,14 @@ const Projects = () => {
           x: function () {
             return index % 2 ===0 ? "100%" : "-100%"
           },
-          ease: "power2.out"
+          ease: "power4.out"
         }, "<").fromTo(image,{
           scale: 1.2,
-          ease: "power2.out"
+          ease: "power4.out"
         }, {
           scale: 1,
           delay:0.1,
-          ease: "power2.out"
+          ease: "power4.out"
         }, "<")
       })
     }, projects)
