@@ -20,10 +20,10 @@ const Header = () => {
       <div className='navs nav-desktop' >
         <ul className='navs__nav-items ' >
           <li ><a className='navs__nav-items--item' href="#work">Projects</a></li>
-          <li ><a className='navs__nav-items--item' href="#about">About</a></li>
           <li ><a className='navs__nav-items--item' href="#contact">Contact Me</a></li>
+          <li ><a className='navs__nav-items--item' href="#about">About</a></li>
         </ul>
-        <Button rounded classes text={'Resume'} />
+        <Button target="_blank" link="https://drive.google.com/file/d/1dk02ndMAf0X4UkBmTkYI7BJd-TbL-54w/view" rounded classes text={'Resume'} />
       </div>
       <div className='navs navs__mobile' >
         <button className='btn navs__mobile--menu' onClick={()=>handleMenu(true)} >
@@ -48,7 +48,7 @@ const Header = () => {
             <li ><a className='navs__nav-items--item' href="#work">Projects</a></li>
             <li ><a className='navs__nav-items--item' href="#about">About</a></li>
             <li ><a className='navs__nav-items--item' href="#contact">Contact Me</a></li>
-            <Button rounded classes={'text-center'} text={'Resume'} />
+            <Button target="_blank" link="https://drive.google.com/file/d/1dk02ndMAf0X4UkBmTkYI7BJd-TbL-54w/view" rounded classes={'text-center'} text={'Resume'} />
           </ul>
         </div>}
       </div>

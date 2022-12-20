@@ -203,18 +203,18 @@ const Hero = () => {
             </h1>
             <p className='hero__text content' >My Area of focus involves developing and designing responsive stunning websites that are as simple and easy to use as possible.</p>
             <div className='CTA' >
-              <Button text={'Contact me'} />
+              <Button link='#contact' text={'Contact me'} />
               <div className='hero__icons' >
-                <Link href="#">
+                <Link target={'_blank'} href="https://www.behance.net/ahmedal-zagri">
                   <Behance />
                 </Link>
-                <Link href="#">
+                <Link target={'_blank'} href="https://github.com/alzeqri1997">
                   <Github />
                 </Link>
-                <Link href="#">
+                <Link target={"_blank"} href="https://twitter.com/A_Zagri">
                   <Twitter />
                 </Link>
-                <Link href="#">
+                <Link target={'_blank'} href="https://www.linkedin.com/in/alzeqri1997">
                   <LinkedIn />
                 </Link>
               </div>

@@ -87,8 +87,8 @@ const AboutMe = () => {
               you take your business to the next level, don't hesitate to get in touch. I can't <br />
               wait to get started on your project!</p>
             <div className='about-me__content--icons'>
-              <Link href={"#"}><LinkedIn/></Link>
-              <Link href={"#"}><Twitter/></Link>
+              <Link target='_blank' href="https://www.linkedin.com/in/alzeqri1997/"><LinkedIn/></Link>
+              <Link target='_blank' href="https://twitter.com/A_Zagri"><Twitter/></Link>
               </div>
           </div>
           <div className='about-me__image'>

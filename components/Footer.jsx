@@ -62,16 +62,16 @@ const Footer = () => {
       <div className='footer__info' >
         <div className='footer__info--logo' > < Logo /> <span className='footer__info--logo-text' >Zeqri</span>  </div>
         <div className='footer__info--icons' >
-          <Link href="#">
+          <Link target={'_blank'} href="https://www.behance.net/ahmedal-zagri">
             <Behance />
           </Link>
-          <Link href="#">
+          <Link target={'_blank'} href="https://github.com/alzeqri1997">
             <Github />
           </Link>
-          <Link href="#">
+          <Link target={'_blank'} href="https://twitter.com/A_Zagri">
             <Twitter />
           </Link>
-          <Link href="#">
+          <Link target={'_blank'} href="https://www.linkedin.com/in/alzeqri1997/">
             <LinkedIn />
           </Link>
         </div>

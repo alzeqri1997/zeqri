@@ -22,7 +22,7 @@ const Project = () => {
     })
     return (
       <div ref={project} className={`project ${imageRight ? 'left-side' : ''}`}>
-        <Link ref={projectImage} className='project__img' href={link} >
+        <Link target="_blank" ref={projectImage} className='project__img' href={link} >
           <img src={image} alt={"project " + { title }} />
           <div className='project__img--overlay' ></div>
         </Link>
@@ -31,8 +31,8 @@ const Project = () => {
           <span className="project__content--title">{title}</span>
           <div dangerouslySetInnerHTML={{ __html: body }} ref={projectBody} className='project__content--body' ></div>
           <div style={{ marginTop: `${projectBodyHight + 40}px` }} className='project__content--cta' >
-            <Button text={'See the Result'} isWithIcon={true} />
-            <div className="icons">{icons.map((item, index) => (<Link key={index} href={item.link} > {item.icon === 'Behance' ? <Behance /> : <Github />}</Link>))}</div>
+            <Button target='_blank' link={link} text={'See the Result'} isWithIcon={true} />
+            {icons && <div className="icons">{icons.map((item, index) => (<Link target='_blank' key={index} href={item.link} > {item.icon === 'Behance' ? <Behance /> : <Github />}</Link>))}</div>}
           </div>
         </div>
       </div>
