@@ -8,6 +8,7 @@ import halabkImage from "./assets/images/projects/HalaBK.png"
 import titanex from "./assets/images/projects/Titanex.png"
 import lunBread from "./assets/images/projects/lunbread.png"
 import rentalHome from "./assets/images/projects/rentalHomeCaseStudy.png"
+import WameedWebsite from './assets/images/projects/WameedWebsite.png'
 
 export const cards = [
 	{
@@ -36,13 +37,7 @@ export const projectDetails = [
           <p>My role was building the <strong>provider dashboard.</strong></p>
           <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
     `,
-		link: "#",
-		icons: [
-			{
-				icon: "Behance",
-				link: "#",
-			},
-		],
+		link: "https://provider.halabk.sa/ar/login",
 	},
 	{
 		imageRight: true,
@@ -54,15 +49,15 @@ export const projectDetails = [
           <p>My Role was <strong>designing</strong> a responsive landing page and <strong>developing</strong> it</p>
           <p>Stack Used: <strong>Figma, ReactJS, TailwindCSS</strong></p>
     `,
-		link: "#",
+		link: "https://bucolic-piroshki-83ad0e.netlify.app/",
 		icons: [
 			{
 				icon: "Behance",
-				link: "#",
+				link: "https://www.behance.net/gallery/152934911/Titanex-Landing-Page/modules/863124739",
 			},
 			{
 				icon: "Github",
-				link: "#",
+				link: "https://github.com/alzeqri1997/titanex-project",
 			},
 		],
 	},
@@ -76,11 +71,11 @@ export const projectDetails = [
     apartment and the property owner.</p>
     <p>My role was designing the <strong>The website.</strong></p>
     `,
-		link: "#",
+		link: "https://www.behance.net/gallery/150659545/Rental-Home-Case-Study/modules/850718985",
 		icons: [
 			{
 				icon: "Behance",
-				link: "#",
+				link: "https://www.behance.net/gallery/150659545/Rental-Home-Case-Study/modules/850718985",
 			},
 		],
 	},
@@ -96,11 +91,30 @@ export const projectDetails = [
     Prototyping, and User Testing. </strong></p>
     <p>Stack Used: <strong> Figma</strong></p>
     `,
-		link: "#",
+		link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
 		icons: [
 			{
 				icon: "Behance",
-				link: "#",
+				link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
+			},
+		],
+	},
+	{
+		imageRight: false,
+		image: WameedWebsite.src,
+		badge: "Web Development",
+		title: "Wameed Website",
+		body: `
+    <p>It’s <strong>a landing page</strong> and <strong>job board</strong> intended to show the company's services and help job seekers find </br>
+		 open positions posted by Wameed Company.</p>
+    <p>My role was developing the <strong>The website.</strong></p>
+    <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
+    `,
+		link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
+		icons: [
+			{
+				icon: "Behance",
+				link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
 			},
 		],
 	},
