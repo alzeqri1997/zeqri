@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
-import Button from './Button'
 import HeroImage from './HeroImage'
 import { Behance, Github, LinkedIn, Twitter, WaveIcon } from './icons'
 
-import { useLayoutEffect, useRef } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Char from './Char'
@@ -101,11 +100,12 @@ const LinedCircle = () => (
 )
 
 const Hero = () => {
+  gsap.registerPlugin(ScrollTrigger)
+  const [element, setElement] = useState('')
   const tl = useRef();
   const hero = useRef();
 
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
     const ctx = gsap.context(() => {
       tl.current = gsap
         .timeline({ defaults: { duration: 0.8 } })
@@ -148,7 +148,6 @@ const Hero = () => {
         }, "<").from('.multiple-polygon', {
           opacity: 0,
           onComplete: function () {
-            console.log('completed')
             scrollDownAnimation();
             scrollParallax()
           }
@@ -156,6 +155,13 @@ const Hero = () => {
     }, hero)
     return () => ctx.revert();
   }, [])
+
+  useLayoutEffect(() => {
+    function scrollToElement() {
+      gsap.to(window, { duration: 2, scrollTo: { y: element, offsetY: 100 }, ease: "circ.inOut" })
+    }
+    scrollToElement()
+  }, [element])
 
   const scrollDownAnimation = () => {
     gsap.timeline({
@@ -177,7 +183,10 @@ const Hero = () => {
 
   const scrollParallax = () => {
     gsap.to('.parallax', {
-      yPercent: -100,
+      yPercent: function (index) {
+        if(index%2 === 0) return 0
+        return -50
+      },
       ease:"power1.out",
       scrollTrigger: {
         trigger: '.hero',
@@ -203,7 +212,8 @@ const Hero = () => {
             </h1>
             <p className='hero__text content' >My Area of focus involves developing and designing responsive stunning websites that are as simple and easy to use as possible.</p>
             <div className='CTA' >
-              <Button link='#contact' text={'Contact me'} />
+              {/* <Button link='#contact' text={'Contact me'} /> */}
+              <button onClick={()=> setElement('#contact')} className='CTA__button'>Contact me</button>
               <div className='hero__icons' >
                 <Link target={'_blank'} href="https://www.behance.net/ahmedal-zagri">
                   <Behance />

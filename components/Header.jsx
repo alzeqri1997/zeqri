@@ -1,27 +1,40 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import Button from './Button'
 import Logo from './Logo'
+import {gsap} from 'gsap'
+import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
 
 const Header = () => {
   
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [element, setElement] = useState('')
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  gsap.registerPlugin(ScrollToPlugin);
+
+
+
+
   const handleMenu = (val) => {
-    console.log("first")
     val === true ? setIsMenuOpen(true) : setIsMenuOpen(false)
-    
   }
   useEffect(() => {
-    document.addEventListener('scroll', ()=> setIsMenuOpen(false))
-  },[isMenuOpen])
+    document.addEventListener('scroll', () => setIsMenuOpen(false))
+  }, [isMenuOpen])
+  
+  useLayoutEffect(() => {
+    function scrollToElement() {
+      gsap.to(window, { duration: 2, scrollTo: { y: element, offsetY: 100 }, ease: "circ.inOut" })
+    }
+    scrollToElement()
+  }, [element])
   return (
     <header className='header container' >
       <div className='header__logo' > < Logo /> <span className='header__logo--text' >Zeqri</span>  </div>
 
       <div className='navs nav-desktop' >
         <ul className='navs__nav-items ' >
-          <li ><a className='navs__nav-items--item' href="#work">Projects</a></li>
-          <li ><a className='navs__nav-items--item' href="#contact">Contact Me</a></li>
-          <li ><a className='navs__nav-items--item' href="#about">About</a></li>
+          <li ><button onClick={()=> setElement('#work')} className='navs__nav-items--item btn'>Projects</button></li>
+          <li ><button onClick={()=> setElement('#contact')} className='navs__nav-items--item btn'>Contact Me</button></li>
+          <li ><button onClick={()=> setElement('#about')} className='navs__nav-items--item btn'>About</button></li>
         </ul>
         <Button target="_blank" link="https://drive.google.com/file/d/1dk02ndMAf0X4UkBmTkYI7BJd-TbL-54w/view" rounded classes text={'Resume'} />
       </div>
@@ -45,9 +58,9 @@ const Header = () => {
             </button>
           </div>
           <ul className='navs__nav-items  ' >
-            <li ><a className='navs__nav-items--item' href="#work">Projects</a></li>
-            <li ><a className='navs__nav-items--item' href="#about">About</a></li>
-            <li ><a className='navs__nav-items--item' href="#contact">Contact Me</a></li>
+            <li ><button onClick={()=> setElement('#work')} className='navs__nav-items--item btn'>Projects</button></li>
+            <li ><button onClick={()=> setElement('#contact')} className='navs__nav-items--item btn' href="#contact">Contact Me</button></li>
+            <li ><button onClick={()=> setElement('#about')} className='navs__nav-items--item btn' href="#about">About</button></li>
             <Button target="_blank" link="https://drive.google.com/file/d/1dk02ndMAf0X4UkBmTkYI7BJd-TbL-54w/view" rounded classes={'text-center'} text={'Resume'} />
           </ul>
         </div>}
