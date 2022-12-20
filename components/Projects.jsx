@@ -17,7 +17,6 @@ const Projects = () => {
         const image = el.children[0].children[0]
         gsap.timeline({
           onStart() {
-            console.log('scroll called')
             ScrollTrigger.refresh()
           },
           scrollTrigger: {
@@ -53,9 +52,9 @@ const Projects = () => {
   }, [])
 
   return (
-    <div ref={projects} className='light-bg relative' >
+    <div  id='work' ref={projects} className='light-bg relative' >
       <Pattern classes='top-pattern' />
-      <section id='work' className='projects container relative' >
+      <section className='projects container relative' >
         <Divider text={"Some of Things I’ve Built"} />
         <Project />
       </section>

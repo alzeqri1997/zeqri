@@ -14,7 +14,7 @@ const Button = ({ rounded = false, text, classes="", isWithIcon = false, link="#
   const isRounded = rounded ? 'rounded-button' : 'full-button'
 
   return (
-    <Link target={target} href={link} >
+    <Link target={target} href="/" >
       <div className={`${classes} button ${isRounded} `}>
         <span>{text}</span> {isWithIcon && <Arrow />}
       </div>

@@ -20,10 +20,8 @@ export default function Home() {
 			demoAsyncCall().then(()=> setIsLoading(false))
 		}
 		if (document.readyState === 'complete') {
-			console.log('inside readyState')
 			onPageLoad()
 		} else {
-			console.log('inside addEventListener')
 			window.addEventListener('load', onPageLoad);
 
 			return ()=> window.removeEventListener('load', onPageLoad)

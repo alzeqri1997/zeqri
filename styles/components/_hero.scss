@@ -1,151 +1,169 @@
-@use '../breakpoints' as *;
-.hero-section{
-  position: relative;
+@use "../breakpoints" as *;
+.hero-section {
+	position: relative;
 }
 
-.hero{
-  position: relative;
-  z-index: 100;
-  padding-top: 131px;
-  padding-bottom: 200px;
-  display: flex;
-  justify-content: space-between;
-  
-  @include breakpoint('large'){
-    padding-top: 40px;
-    padding-bottom: 170px;
-  }
+.hero {
+	position: relative;
+	z-index: 100;
+	padding-top: 131px;
+	padding-bottom: 200px;
+	display: flex;
+	justify-content: space-between;
 
-  &__sub-heading{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    white-space: nowrap;
-    @include breakpoint('small'){
-      white-space:normal;
+	@include breakpoint("large") {
+		padding-top: 40px;
+		padding-bottom: 170px;
+	}
+
+	&__sub-heading {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		white-space: nowrap;
+		@include breakpoint("small") {
+			white-space: normal;
+		}
+		&--char {
+			transform: translateY(100px);
+			display: inline-block;
+			font-size: inherit;
+			color: inherit;
+			line-height: inherit;
+		}
+	}
+	&__heading {
+		// clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);;
+		.text {
+			font-size: inherit;
+			color: inherit;
+			line-height: inherit;
+			transform: translateY(100px);
+			display: inline-block;
+		}
+	}
+
+	&__left-side {
+		max-width: 800px;
+		width: 100%;
+	}
+
+	&__image {
+		@include breakpoint("large") {
+			position: absolute;
+			z-index: -1;
+			right: 0;
+			opacity: 0.3;
+		}
+		@include breakpoint("medium") {
+			top: -1%;
+			right: -10%;
+		}
+		@include breakpoint("small") {
+			top: -12%;
+			right: -37%;
+		}
+	}
+
+	&__heading {
+		margin-top: 4px;
+		margin-bottom: 14px;
+	}
+	.attention {
+		font-size: inherit;
+		color: var(--primary-color);
+	}
+
+	.CTA {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+		margin-top: 17px;
+		flex-wrap: wrap;
+    
+    &__button {
+			cursor: pointer;
+      font-family: inherit;
+      font-weight: bold;
+      padding: 9px 20px 5px 20px;
+      border-radius: 10px;
+      line-height: 25px;
+      font-size: 1.8rem;
+      transition: all 0.3s;
+      background-color: var(--primary-color);
+      color: var(--bg-color);
+      border: 1px solid var(--primary-color);
+
+			&:hover{
+				border: 1px solid var(--primary-color);
+			color: var(--primary-color);
+			background-color: unset;
+			}
     }
-    &--char{
-      transform: translateY(100px);
-      display: inline-block;
-      font-size: inherit;
-      color: inherit;
-      line-height: inherit;
-    }
-  }
-  &__heading{
-    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);;
-    .text{
-      font-size: inherit;
-      color: inherit;
-      line-height: inherit;
-      transform: translateY(100px);
-      display: inline-block;
-    }
-  }
-  
+	}
 
-  &__left-side{
-    max-width: 800px;
-    width: 100%;
-  }
 
-  &__image{
-  @include breakpoint('large'){
-      position: absolute;
-      z-index: -1;
-      right: 0;
-      opacity: .3;
-    }
-  @include breakpoint('medium'){
-      top: -1%;
-      right: -10%;
-    }
-    @include breakpoint('small'){
-      top: -12%;
-      right: -37%;
-    }
-  }
+	&__icons {
+		display: flex;
+		gap: 24px;
+	}
+}
+.dots {
+	z-index: 10;
+	position: absolute;
+	left: 60px;
+	bottom: 176px;
 
-  &__heading{
-    margin-top: 4px;
-    margin-bottom: 14px;
-  }
-  .attention{
-    font-size: inherit;
-    color: var(--primary-color);
-  }
-
-  .CTA{
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    margin-top: 17px;
-    flex-wrap: wrap;
-  }
-
-&__icons{
-  display: flex;
-  gap: 24px;
+	@include breakpoint("small") {
+		left: -130px;
+		top: 126px;
+		bottom: unset;
+	}
 }
 
-}
-.dots{
-  z-index:10;
-  position: absolute;
-  left: 60px;
-  bottom: 176px;
-
-  @include breakpoint('small'){
-    left: -130px;
-    top: 126px;
-    bottom: unset;
-  }
+.circle {
+	z-index: 10;
+	position: absolute;
+	left: 470px;
+	top: 128px;
 }
 
-.circle{
-  z-index:10;
-  position: absolute;
-  left: 470px;
-  top: 128px;
-
+.spiral {
+	z-index: 10;
+	position: absolute;
+	left: 908px;
+	top: 220px;
+	@include customBreakpoint("1110px") {
+		left: 800px;
+	}
 }
 
-.spiral{
-  z-index:10;
-  position: absolute;
-  left: 908px;
-  top: 220px;
-  @include customBreakpoint('1110px'){
-    left: 800px;
-  }
+.lined-circle {
+	z-index: 10;
+	position: absolute;
+	bottom: 22px;
+	right: 130px;
 }
 
-.lined-circle{
-  z-index:10;
-  position: absolute;
-  bottom: 22px;
-right: 130px;
+.heart {
+	z-index: 10;
+	position: absolute;
+	bottom: 176px;
+	right: 660px;
 }
 
-.heart{
-  z-index:10;
-  position: absolute;
-  bottom: 176px;
-  right: 660px;
-}
-
-.scroll{
-  z-index:10;
-  position: absolute;
-  left: 50%;
-  bottom: 50px;
-  .multiple-polygon{
-    opacity: 0.4;
-  }
-  .overlay{
-    path{
-      opacity: 0;
-    }
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+.scroll {
+	z-index: 10;
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	.multiple-polygon {
+		opacity: 0.4;
+	}
+	.overlay {
+		path {
+			opacity: 0;
+		}
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
 }

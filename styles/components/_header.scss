@@ -38,9 +38,11 @@
 			}
 
 			&--item {
+				font-family: inherit;
 				font-size: 2rem;
 				padding: 1rem 2rem;
 				display: inline-block;
+				color: #fff;
 			}
 		}
 	}
@@ -95,7 +97,7 @@
 						margin-bottom: 8px;
 					}
 					&:hover {
-						background-color: var(--light-bg-color);
+						background-color: var(--light-bg-color) !important;
 					}
 				}
 			}
