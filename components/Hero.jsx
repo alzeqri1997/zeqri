@@ -184,7 +184,7 @@ const Hero = () => {
   const scrollParallax = () => {
     gsap.to('.parallax', {
       yPercent: function (index) {
-        if(index%2 === 0) return 0
+        if(index%2 === 0) return -100
         return -50
       },
       ease:"power1.out",

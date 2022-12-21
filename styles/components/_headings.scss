@@ -20,6 +20,10 @@
     font-size: 4rem;
     line-height: 5rem;
   }
+  @include breakpoint('small'){
+    font-size: 3.2rem;
+    line-height: 4.7rem;
+  }
 }
 
 .content{

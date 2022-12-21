@@ -3,17 +3,17 @@
 
 @font-face {
   font-family: "calibre";
-  src: url(../public/assets/fonts/CalibreMedium.otf);
+  src: url(../public/fonts/CalibreMedium.otf);
   font-weight: normal;
 }
 @font-face {
   font-family: "calibre";
-  src: url(../public/assets/fonts/CalibreBold.otf);
+  src: url(../public/fonts/CalibreBold.otf);
   font-weight: bold;
 }
 @font-face {
   font-family: "calibre";
-  src: url(../public/assets/fonts/CalibreLight.otf);
+  src: url(../public/fonts/CalibreLight.otf);
   font-weight: lighter;
 }
 
@@ -42,9 +42,9 @@ body {
   @include breakpoint('medium'){
     font-size: 56.25%;
   }
-  @include breakpoint('small'){
-    font-size: 50%;
-  }
+  // @include breakpoint('small'){
+  //   font-size: 50%;
+  // }
   overflow-x: hidden;
 }
 
