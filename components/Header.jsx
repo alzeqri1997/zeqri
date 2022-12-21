@@ -22,9 +22,13 @@ const Header = () => {
   
   useLayoutEffect(() => {
     function scrollToElement() {
-      gsap.to(window, { duration: 2, scrollTo: { y: element, offsetY: 100 }, ease: "circ.inOut" })
+      if (element) {
+        gsap.to(window, { duration: 2, scrollTo: { y: element, offsetY: 100 }, ease: "circ.inOut" })
+      }
     }
     scrollToElement()
+
+    return ()=> setElement('')
   }, [element])
   return (
     <header className='header container' >

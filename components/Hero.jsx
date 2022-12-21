@@ -105,7 +105,17 @@ const Hero = () => {
   const tl = useRef();
   const hero = useRef();
 
+  
   useLayoutEffect(() => {
+    const isMobile = () => {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        // true for mobile device
+        return true
+      }else{
+        // false for not mobile device
+        return false
+      }
+    }
     const ctx = gsap.context(() => {
       tl.current = gsap
         .timeline({ defaults: { duration: 0.8 } })
@@ -148,8 +158,8 @@ const Hero = () => {
         }, "<").from('.multiple-polygon', {
           opacity: 0,
           onComplete: function () {
-            scrollDownAnimation();
-            scrollParallax()
+            scrollDownAnimation();  
+            if(!isMobile()) scrollParallax()
           }
         },"<")
     }, hero)
@@ -166,7 +176,7 @@ const Hero = () => {
   const scrollDownAnimation = () => {
     gsap.timeline({
       repeat: -1,
-      repeatDelay: 1.5,
+      repeatDelay: 1.2,
       defaults: {
       duration:1,
       }
@@ -177,7 +187,6 @@ const Hero = () => {
         scale:[1,1.1,1],
       },
       stagger: .2,
-      delay:2,
     })
   }
 
@@ -190,7 +199,7 @@ const Hero = () => {
       ease:"power1.out",
       scrollTrigger: {
         trigger: '.hero',
-        start: 'top 10%',
+        start: '-18% top',
         scrub: 2,
       }
     })
