@@ -60,11 +60,11 @@ const Circle = () => (
   </svg>
 )
 
-const MultiplePolygon = ({classes = ''}) => (
+const MultiplePolygon = ({ classes = '' }) => (
   <svg className={classes} width="22" height="84" viewBox="0 0 22 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12.9033 18.9722C12.1335 20.3055 10.209 20.3055 9.43924 18.9722L3.52542 8.72915C2.75562 7.39582 3.71787 5.72915 5.25747 5.72915L17.0851 5.72915C18.6247 5.72915 19.587 7.39582 18.8172 8.72915L12.9033 18.9722Z" fill="white" />
-      <path d="M12.9033 49.6296C12.1335 50.9629 10.209 50.9629 9.43924 49.6296L3.52542 39.3865C2.75562 38.0532 3.71787 36.3865 5.25747 36.3865L17.0851 36.3865C18.6247 36.3865 19.587 38.0532 18.8172 39.3865L12.9033 49.6296Z" fill="white" />
-      <path d="M12.9032 80.287C12.1334 81.6203 10.2089 81.6203 9.43912 80.287L3.5253 70.0439C2.75549 68.7106 3.71774 67.0439 5.25735 67.0439L17.085 67.0439C18.6246 67.0439 19.5869 68.7106 18.817 70.0439L12.9032 80.287Z" fill="white" />
+    <path d="M12.9033 18.9722C12.1335 20.3055 10.209 20.3055 9.43924 18.9722L3.52542 8.72915C2.75562 7.39582 3.71787 5.72915 5.25747 5.72915L17.0851 5.72915C18.6247 5.72915 19.587 7.39582 18.8172 8.72915L12.9033 18.9722Z" fill="white" />
+    <path d="M12.9033 49.6296C12.1335 50.9629 10.209 50.9629 9.43924 49.6296L3.52542 39.3865C2.75562 38.0532 3.71787 36.3865 5.25747 36.3865L17.0851 36.3865C18.6247 36.3865 19.587 38.0532 18.8172 39.3865L12.9033 49.6296Z" fill="white" />
+    <path d="M12.9032 80.287C12.1334 81.6203 10.2089 81.6203 9.43912 80.287L3.5253 70.0439C2.75549 68.7106 3.71774 67.0439 5.25735 67.0439L17.085 67.0439C18.6246 67.0439 19.5869 68.7106 18.817 70.0439L12.9032 80.287Z" fill="white" />
   </svg>
 
 )
@@ -105,13 +105,13 @@ const Hero = () => {
   const tl = useRef();
   const hero = useRef();
 
-  
+
   useLayoutEffect(() => {
     const isMobile = () => {
-      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         // true for mobile device
         return true
-      }else{
+      } else {
         // false for not mobile device
         return false
       }
@@ -129,12 +129,17 @@ const Hero = () => {
           opacity: 0,
           y: 10,
           duration: .4
-        }, "-=.3").to('.hero__heading .heading1 .text', {
+        }, "-=.3").fromTo('.hero__heading .heading1 .text', {
+          y: 100,
+          opacity:0
+        },{
           y: 0,
+          opacity:1,
           stagger: 0.1,
           delay: 0.3,
-          duration: .4
+          duration: 1
         }, "-=.7").from('.hero__text', {
+          opacity:1,
           y: 50,
           opacity: 0
         }).from('.CTA', {
@@ -158,10 +163,10 @@ const Hero = () => {
         }, "<").from('.multiple-polygon', {
           opacity: 0,
           onComplete: function () {
-            scrollDownAnimation();  
-            if(!isMobile()) scrollParallax()
+            scrollDownAnimation();
+            if (!isMobile()) scrollParallax()
           }
-        },"<")
+        }, "<")
     }, hero)
     return () => ctx.revert();
   }, [])
@@ -178,13 +183,13 @@ const Hero = () => {
       repeat: -1,
       repeatDelay: 1.2,
       defaults: {
-      duration:1,
+        duration: 1,
       }
     }).to('.scroll .overlay path', {
-      transformOrigin:"center",
+      transformOrigin: "center",
       keyframes: {
         opacity: [0, 1, 0],
-        scale:[1,1.1,1],
+        scale: [1, 1.1, 1],
       },
       stagger: .2,
     })
@@ -193,18 +198,15 @@ const Hero = () => {
   const scrollParallax = () => {
     gsap.to('.parallax', {
       yPercent: function (index) {
-        if(index%2 === 0) return -100
+        if (index % 2 === 0) return -100
         return -50
       },
-      ease:"power1.out",
+      ease: "power1.out",
       scrollTrigger: {
         trigger: '.hero',
         start: '-18% top',
         scrub: 2,
       }
-    })
-    gsap.to('.hero__left-side', {
-      
     })
   }
 
@@ -215,14 +217,14 @@ const Hero = () => {
           <div className='hero__left-side' >
             <div className='hero__sub-heading sub-heading'><Char charClass='hero__sub-heading--char' >Hello There!</Char> <WaveIcon />  </div>
             <h1 className='hero__heading ' >
-              <div className='heading1 hidden' ><span className='text' >I am a Front-End Developer</span></div>
-              <div className='heading1 hidden' ><span className='text' >& UI Designer who loves</span></div>
-              <div className='heading1 hidden' ><span className='text' ><span className='attention' >Coding</span> and <span className='attention' >Designing</span></span></div>
+              <div className='heading1' ><span className='text' >I am a Front-End Developer</span></div>
+              <div className='heading1' ><span className='text' >& UI Designer who loves</span></div>
+              <div className='heading1' ><span className='text' ><span className='attention' >Coding</span> and <span className='attention' >Designing</span></span></div>
             </h1>
             <p className='hero__text content' >My Area of focus involves developing and designing responsive stunning websites that are as simple and easy to use as possible.</p>
             <div className='CTA' >
               {/* <Button link='#contact' text={'Contact me'} /> */}
-              <button onClick={()=> setElement('#contact')} className='CTA__button'>Contact me</button>
+              <button onClick={() => setElement('#contact')} className='CTA__button'>Contact me</button>
               <div className='hero__icons' >
                 <Link target={'_blank'} href="https://www.behance.net/ahmedal-zagri">
                   <Behance />
@@ -250,7 +252,7 @@ const Hero = () => {
       <LinedCircle />
       <div className='scroll' >
         <MultiplePolygon classes={'multiple-polygon'} />
-        <MultiplePolygon classes={'overlay'}  />
+        <MultiplePolygon classes={'overlay'} />
       </div>
     </section>
   )

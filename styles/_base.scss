@@ -1,21 +1,21 @@
 @use 'breakpoints' as *;
 // fonts
 
-@font-face {
-  font-family: "calibre";
-  src: url(../public/fonts/CalibreMedium.otf);
-  font-weight: normal;
-}
-@font-face {
-  font-family: "calibre";
-  src: url(../public/fonts/CalibreBold.otf);
-  font-weight: bold;
-}
-@font-face {
-  font-family: "calibre";
-  src: url(../public/fonts/CalibreLight.otf);
-  font-weight: lighter;
-}
+  @font-face {
+    font-family: "calibre";
+    src: url(../public/fonts/CalibreMedium.otf);
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "calibre";
+    src: url(../public/fonts/CalibreBold.otf);
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "calibre";
+    src: url(../public/fonts/CalibreLight.otf);
+    font-weight: lighter;
+  }
 
 // Variables
 

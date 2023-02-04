@@ -8,7 +8,8 @@ const Project = () => {
   const ProjectItem = (props) => {
     const [projectBodyHight, setProjectBodyHight] = useState(0)
     const projectBody = useRef()
-    const { imageRight, image, badge, title, body, link, icons } = props.item
+    const { image, badge, title, body, link, icons } = props.item;
+    const imageRight = props.imageRight
 
     useEffect(() => {
       const { current } = projectBody
@@ -17,7 +18,7 @@ const Project = () => {
     return (
       <div  className={`project ${imageRight ? 'left-side' : ''}`}>
         <Link target="_blank"  className='project__img' href={link} >
-          <img src={image} alt={"project " + { title }} />
+          <img src={image} alt={"project " +  title } />
           <div className='project__img--overlay' ></div>
         </Link>
         <div  className='project__content' >
@@ -38,7 +39,7 @@ const Project = () => {
   return (
 
     projectDetails.map((item, index) => (
-      <ProjectItem key={index} item={item} />
+      <ProjectItem imageRight={index%2 ===1 ? true : false} key={index} item={item} />
     ))
 
   )
