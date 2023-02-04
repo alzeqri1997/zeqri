@@ -8,7 +8,8 @@ import halabkImage from "./assets/images/projects/HalaBK.png"
 import titanex from "./assets/images/projects/Titanex.png"
 import lunBread from "./assets/images/projects/lunbread.png"
 import rentalHome from "./assets/images/projects/rentalHomeCaseStudy.png"
-import WameedWebsite from './assets/images/projects/WameedWebsite.png'
+import WameedWebsite from "./assets/images/projects/WameedWebsite.png"
+import liquidus from "./assets/images/projects/LiquidusThumbnail.png"
 
 export const cards = [
 	{
@@ -27,7 +28,6 @@ export const cards = [
 
 export const projectDetails = [
 	{
-		imageRight: false,
 		image: halabkImage.src,
 		badge: "Web Development",
 		title: "Halabk Service Provider Dashboard",
@@ -37,10 +37,38 @@ export const projectDetails = [
           <p>My role was building the <strong>provider dashboard.</strong></p>
           <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
     `,
-		link: "https://provider.halabk.sa/ar/login",
+		link: "https://halabk.sa/en/",
 	},
 	{
-		imageRight: true,
+		image: WameedWebsite.src,
+		badge: "Web Development",
+		title: "Wameed Website",
+		body: `
+    <p>It’s <strong>a landing page</strong> and <strong>job board</strong> intended to show the company's services and help job seekers find </br>
+		 open positions posted by Wameed Company.</p>
+    <p>My role was developing the <strong>The website.</strong></p>
+    <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
+    `,
+		link: "https://www.wameed.co/en",
+	},
+	{
+		image: liquidus.src,
+		badge: "Web Development",
+		title: " Liquidus Landing page",
+		body: `
+    <p>Liquidus is a landing page to <strong>explain what Liquidus Company is </strong>and promote their mobile app.</p>
+          <p>My Role was <strong>developing</strong> a responsive landing page with animation and <strong>integrating it with their API.</strong>
+          <p>Stack Used: <strong> ReactJS, TailwindCSS, Typescript, and GSAP</strong></p>
+    `,
+		link: "https://alzeqri1997.github.io/liquidus-react-typescript-tailwindcss/",
+		icons: [
+			{
+				icon: "Github",
+				link: "https://github.com/alzeqri1997/liquidus-react-typescript-tailwindcss",
+			},
+		],
+	},
+	{
 		image: titanex.src,
 		badge: "Web Design & Web Development",
 		title: "Titanex Landing page",
@@ -62,7 +90,6 @@ export const projectDetails = [
 		],
 	},
 	{
-		imageRight: false,
 		image: rentalHome.src,
 		badge: "Case Study",
 		title: "Rental Home Website",
@@ -80,7 +107,6 @@ export const projectDetails = [
 		],
 	},
 	{
-		imageRight: true,
 		image: lunBread.src,
 		badge: "Mobile Design",
 		title: "LunBread Mobile Application",
@@ -99,17 +125,5 @@ export const projectDetails = [
 			},
 		],
 	},
-	{
-		imageRight: false,
-		image: WameedWebsite.src,
-		badge: "Web Development",
-		title: "Wameed Website",
-		body: `
-    <p>It’s <strong>a landing page</strong> and <strong>job board</strong> intended to show the company's services and help job seekers find </br>
-		 open positions posted by Wameed Company.</p>
-    <p>My role was developing the <strong>The website.</strong></p>
-    <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
-    `,
-		link: "https://www.wameed.co/en",
-	},
+	
 ]
