@@ -65,7 +65,7 @@ const Header = () => {
             <li ><button onClick={()=> setElement('#work')} className='navs__nav-items--item btn'>Projects</button></li>
             <li ><button onClick={()=> setElement('#contact')} className='navs__nav-items--item btn' href="#contact">Contact Me</button></li>
             <li ><button onClick={()=> setElement('#about')} className='navs__nav-items--item btn' href="#about">About</button></li>
-            <Button target="_blank" link="https://drive.google.com/file/d/1dk02ndMAf0X4UkBmTkYI7BJd-TbL-54w/view" rounded classes={'text-center'} text={'Resume'} />
+            <Button target="_blank" link="https://drive.google.com/file/d/1gkvV1lu2AWkVtZ4wU-IzV-OZqJMhD4ZF/view?usp=share_link" rounded classes={'text-center'} text={'Resume'} />
           </ul>
         </div>}
       </div>
