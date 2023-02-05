@@ -40,7 +40,7 @@ const Header = () => {
           <li ><button onClick={()=> setElement('#contact')} className='navs__nav-items--item btn'>Contact Me</button></li>
           <li ><button onClick={()=> setElement('#about')} className='navs__nav-items--item btn'>About</button></li>
         </ul>
-        <Button target="_blank" link="https://drive.google.com/file/d/1dk02ndMAf0X4UkBmTkYI7BJd-TbL-54w/view" rounded classes text={'Resume'} />
+        <Button target="_blank" link="https://drive.google.com/file/d/1gkvV1lu2AWkVtZ4wU-IzV-OZqJMhD4ZF/view?usp=share_link" rounded classes text={'Resume'} />
       </div>
       <div className='navs navs__mobile' >
         <button className='btn navs__mobile--menu' onClick={()=>handleMenu(true)} >
