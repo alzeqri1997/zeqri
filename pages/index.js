@@ -33,17 +33,17 @@ export default function Home() {
 					content="zeqri for web development and design"
 				/>
 
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.ico?" />
 
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"
 					href="/apple-touch-icon.png"
 				/>
-				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="manifest" href="/site.webmanifest?" />
 				<link
 					rel="mask-icon"
-					href="/safari-pinned-tab.svg"
+					href="/safari-pinned-tab.svg?"
 					color="#5bbad5"
 				/>
 				<meta name="msapplication-TileColor" content="#da532c" />
