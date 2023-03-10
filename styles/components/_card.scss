@@ -3,6 +3,7 @@
 @use "../breakpoints" as *;
 
 .card {
+	opacity: 0;
 	display: flex;
 	position: relative;
 	gap: 18px;
@@ -40,8 +41,8 @@
 		&--title {
 			display: block;
 			color: var(--primary-color);
-			font-size: 2.4rem;
-			font-weight: bold;
+			font-size: 2.3rem;
+			font-weight: 800;
 			margin-bottom: 10px;
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 			&--char {
@@ -54,8 +55,8 @@
 
 		&--body {
 			color: #d5e3f6;
-			font-size: 2.4rem;
-			line-height: 36px;
+			font-size: 1.8rem;
+			line-height: 27px;
 		}
 	}
 

@@ -16,9 +16,13 @@ const WhatIDo = () => {
           trigger: '.card',
           start: 'top center',
           // toggleActions: "restart none none reset"
-        }})
+        }
+        })
+        .to('.card', {
+          opacity:1,
+          duration: 0.5,
+        })
         .from('.card', {
-          opacity: 0,
           transformOrigin: 'left center',
           duration: 0.5,
           x: function (index) {
@@ -26,7 +30,7 @@ const WhatIDo = () => {
             else return 300
           },
           scale: 1.5,
-        })
+        }, '<')
         .from('.card__image', {
           opacity: 0,
           duration: 0.5,

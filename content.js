@@ -13,14 +13,14 @@ import liquidus from "./assets/images/projects/LiquidusThumbnail.png"
 
 export const cards = [
 	{
-		imageSM: paintSM.src,
-		imageBG: paintBG.src,
+		imageSM: paintSM,
+		imageBG: paintBG,
 		title: "High-quality UI Design or Re-design",
 		body: "in the shortest possible time. I will help you make your product perfectly useable with actionable suggestions for improvement.",
 	},
 	{
-		imageSM: nerd.src,
-		imageBG: nerdBG.src,
+		imageSM: nerd,
+		imageBG: nerdBG,
 		title: "Building a complete web application",
 		body: "to ensure that website visitors can easily interact with the page.",
 	},
@@ -28,7 +28,7 @@ export const cards = [
 
 export const projectDetails = [
 	{
-		image: halabkImage.src,
+		image: halabkImage,
 		badge: "Web Development",
 		title: "Halabk Service Provider Dashboard",
 		body: `
@@ -40,7 +40,7 @@ export const projectDetails = [
 		link: "https://halabk.sa/en/",
 	},
 	{
-		image: WameedWebsite.src,
+		image: WameedWebsite,
 		badge: "Web Development",
 		title: "Wameed Website",
 		body: `
@@ -52,7 +52,7 @@ export const projectDetails = [
 		link: "https://www.wameed.co/en",
 	},
 	{
-		image: liquidus.src,
+		image: liquidus,
 		badge: "Web Development",
 		title: " Liquidus Landing page",
 		body: `
@@ -69,7 +69,7 @@ export const projectDetails = [
 		],
 	},
 	{
-		image: titanex.src,
+		image: titanex,
 		badge: "Web Design & Web Development",
 		title: "Titanex Landing page",
 		body: `
@@ -90,7 +90,7 @@ export const projectDetails = [
 		],
 	},
 	{
-		image: rentalHome.src,
+		image: rentalHome,
 		badge: "Case Study",
 		title: "Rental Home Website",
 		body: `
@@ -107,7 +107,7 @@ export const projectDetails = [
 		],
 	},
 	{
-		image: lunBread.src,
+		image: lunBread,
 		badge: "Mobile Design",
 		title: "LunBread Mobile Application",
 		body: `

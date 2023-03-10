@@ -6,7 +6,7 @@
 .hero {
 	position: relative;
 	z-index: 100;
-	padding-top: 131px;
+	padding-top: 30px;
 	padding-bottom: 200px;
 	display: flex;
 	justify-content: space-between;
@@ -77,19 +77,24 @@
 		gap: 32px;
 		margin-top: 17px;
 		flex-wrap: wrap;
+		@include breakpoint(small){
+			justify-content: center;
+		}
     
     &__button {
 			cursor: pointer;
       font-family: inherit;
-      font-weight: bold;
-      padding: 9px 20px 5px 20px;
+      font-weight: 700;
+      padding: 10px 20px 10px 20px;
       border-radius: 10px;
-      line-height: 25px;
       font-size: 1.8rem;
       transition: all 0.3s;
       background-color: var(--primary-color);
       color: var(--bg-color);
       border: 1px solid var(--primary-color);
+			@include breakpoint(small){
+				width: 100%;
+			}
 
 			&:hover{
 				border: 1px solid var(--primary-color);
@@ -154,6 +159,7 @@
 	position: absolute;
 	left: 50%;
 	bottom: 50px;
+	transform: translateX(-50%);
 	.multiple-polygon {
 		opacity: 0.4;
 	}

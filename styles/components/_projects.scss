@@ -96,8 +96,8 @@
       }
 
       &--title{
-        font-size: 3.2rem;
-        font-weight: bold;
+        font-size: 3rem;
+        font-weight: 800;
         display: block;
         margin-bottom: 15px;
       }
@@ -111,7 +111,8 @@
         border-radius: 15px;
         p {
           color: #D5E3F6;
-          font-size: 1.6rem;
+          font-size: 1.4rem;
+          font-weight: 21px;
           @include breakpoint('small'){
             line-height: 2.5rem;
           }
@@ -130,12 +131,22 @@
         display: flex;
         align-items: center;
         gap: 21px;
+        @include breakpoint(small){
+          justify-content: space-between;
+
+          a{
+            width: 100%;
+          }
+        }
         .button{
           width: fit-content;
           align-items: center;
           display: flex;
           gap: 21px;
-          padding: 9px 20px 0px 20px;
+          @include breakpoint(small){
+            width: 100%;
+            justify-content: space-between;
+          }
         }
 
         .icons{
@@ -149,5 +160,17 @@
       }
       }
     }
+  }
+}
+
+.more-projects  {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.8rem;
+  padding-left: 18px;
+  padding-right: 18px;
+  &__link{
+    text-decoration: underline;
+    color: var(--primary-color);
   }
 }

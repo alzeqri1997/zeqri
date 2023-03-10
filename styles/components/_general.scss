@@ -16,6 +16,11 @@
   background-color: var(--light-bg-color);
 }
 
+.hide{
+  visibility: hidden;
+  opacity: 0;
+}
+
 .top-pattern{
   position: absolute;
   top: 0;

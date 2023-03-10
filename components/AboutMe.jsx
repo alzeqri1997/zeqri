@@ -6,6 +6,7 @@ import { LinkedIn, Pattern2, Twitter } from './icons'
 import {gsap} from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Char from './Char'
+import Image from 'next/image'
 
 
 const AboutMe = () => {
@@ -93,7 +94,7 @@ const AboutMe = () => {
           </div>
           <div className='about-me__image'>
             <div className='about-me__image--overlay'></div>
-            <img className='about-me__image-img'  src={myPic.src} alt="about me ahmed alzagri" /></div>
+            <Image className='about-me__image-img'  src={myPic} alt="about me ahmed al-zeqri" /></div>
         </div>
       <Pattern2 classes={'right-pattern'} />
       <Pattern2 classes={'left-pattern'} />

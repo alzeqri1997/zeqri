@@ -24,7 +24,7 @@ const Header = () => {
     function scrollToElement() {
       if (element) {
         gsap.to(window, { duration: 2, scrollTo: { y: element, offsetY: 100 }, ease: "circ.inOut" })
-      }
+      } 
     }
     scrollToElement()
 
