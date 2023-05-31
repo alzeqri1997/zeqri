@@ -50,7 +50,7 @@ const ContactMe = () => {
   return (
     <section ref={contactUs} id="contact" className='container contact-me ' >
       <Divider text={"Contact Me"} />
-      <h1 className='contact-me__heading' > <Char charClass='contact-me__heading--char' >Let's Work Together</Char> </h1>
+      <h2 className='contact-me__heading' > <Char charClass='contact-me__heading--char' >Let's Work Together</Char> </h2>
       <span className='contact-me__sub-heading' >I'm currently available to take on new projects, so feel free to contact with me <br />
         so we can talk about everything related to your project.</span>
       <div className='contact-me__info' >

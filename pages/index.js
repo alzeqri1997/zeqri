@@ -27,12 +27,13 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Zeqri</title>
+				<title> Ahmed Al-zeqri | Front End developer & UI designer </title>
 				<meta
 					name="description"
 					content="zeqri for web development and design"
 				/>
 
+				<meta name="description" content="Ahmed Al-zeqri is a front end developer & UI designer who loves coding and designing."/>
 				<link rel="icon" href="/zeqri/favicon.ico?" />
 
 				<link

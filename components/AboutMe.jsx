@@ -77,7 +77,7 @@ const AboutMe = () => {
       <div className='relative hidden' >
         <div className='container about-me' >
           <div className='about-me__content'>
-            <h1 className='about-me__content--heading'><Char charClass='about-me__content--heading-char' >A Few Words About me</Char></h1>
+            <h2 className='about-me__content--heading'><Char charClass='about-me__content--heading-char' >A Few Words About me</Char></h2>
             <p className='about-me__content--text'>I’m <strong>Ahmed Al-zeqri</strong>, a freelance young and passionate <strong>developer</strong> & <strong>designer</strong> <br />
               who loves his work.</p>
             <br />

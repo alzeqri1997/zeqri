@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import HeroImage from './HeroImage'
-import { Behance, Github, LinkedIn, Twitter, WaveIcon } from './icons'
+import { Behance, Github, LinkedIn, Twitter, Upwork, WaveIcon } from './icons'
 
 import { useLayoutEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
@@ -237,6 +237,9 @@ const Hero = () => {
                 </Link>
                 <Link target={'_blank'} href="https://www.linkedin.com/in/alzeqri1997">
                   <LinkedIn />
+                </Link>
+                <Link target={'_blank'} href="https://www.upwork.com/fl/zeqri">
+                  <Upwork />
                 </Link>
               </div>
             </div>

@@ -8,8 +8,8 @@ import halabkImage from "./assets/images/projects/HalaBK.png"
 import titanex from "./assets/images/projects/Titanex.png"
 import lunBread from "./assets/images/projects/lunbread.png"
 import rentalHome from "./assets/images/projects/rentalHomeCaseStudy.png"
-import WameedWebsite from "./assets/images/projects/WameedWebsite.png"
 import liquidus from "./assets/images/projects/LiquidusThumbnail.png"
+import ajars from './assets/images/projects/ajars.png'
 
 export const cards = [
 	{
@@ -28,6 +28,18 @@ export const cards = [
 
 export const projectDetails = [
 	{
+		image: ajars,
+		badge: "Web Development",
+		title: "Ajras platform",
+		body: `
+    <p><strong>Ajras</strong> is A Saudi Propetech Company that provides solutions to make rental payment easier and simpler.</p>
+          <p>The Project contains <strong>landing page, User Panel, and super admin Panel.</strong></p>
+          <p>My role was converting the design to <strong> real life website </strong></p>
+          <p>Tech Stack Used: <strong>ReactJS, Vite, TailwindCSS, Typescript.</strong></p>
+    `,
+		link: "https://dev-v2.ajras.com/",
+	},
+	{
 		image: halabkImage,
 		badge: "Web Development",
 		title: "Halabk Service Provider Dashboard",
@@ -38,18 +50,6 @@ export const projectDetails = [
           <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
     `,
 		link: "https://halabk.sa/en/",
-	},
-	{
-		image: WameedWebsite,
-		badge: "Web Development",
-		title: "Wameed Website",
-		body: `
-    <p>It’s <strong>a landing page</strong> and <strong>job board</strong> intended to show the company's services and help job seekers find </br>
-		 open positions posted by Wameed Company.</p>
-    <p>My role was developing the <strong>The website.</strong></p>
-    <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
-    `,
-		link: "https://www.wameed.co/en",
 	},
 	{
 		image: liquidus,
@@ -106,24 +106,24 @@ export const projectDetails = [
 			},
 		],
 	},
-	{
-		image: lunBread,
-		badge: "Mobile Design",
-		title: "LunBread Mobile Application",
-		body: `
-    <p><strong>Lunbread</strong> is a bakery app that allows users to quickly order their favorite backed <br>
-    goods, sandwiches, pastry and cakes that skip in-line food ordering by using our app</p>
-    <p>My Role was User <strong> Research, Personas, Wireframes, <br>
-    Prototyping, and User Testing. </strong></p>
-    <p>Stack Used: <strong> Figma</strong></p>
-    `,
-		link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
-		icons: [
-			{
-				icon: "Behance",
-				link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
-			},
-		],
-	},
+	// {
+	// 	image: lunBread,
+	// 	badge: "Mobile Design",
+	// 	title: "LunBread Mobile Application",
+	// 	body: `
+  //   <p><strong>Lunbread</strong> is a bakery app that allows users to quickly order their favorite backed <br>
+  //   goods, sandwiches, pastry and cakes that skip in-line food ordering by using our app</p>
+  //   <p>My Role was User <strong> Research, Personas, Wireframes, <br>
+  //   Prototyping, and User Testing. </strong></p>
+  //   <p>Stack Used: <strong> Figma</strong></p>
+  //   `,
+	// 	link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
+	// 	icons: [
+	// 		{
+	// 			icon: "Behance",
+	// 			link: "https://www.behance.net/gallery/150661707/lunBread-Mobile-App-Design-Case-Study/modules/851271543",
+	// 		},
+	// 	],
+	// },
 	
 ]
