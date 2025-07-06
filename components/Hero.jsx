@@ -218,8 +218,8 @@ const Hero = () => {
             <div className='hero__sub-heading sub-heading'><Char charClass='hero__sub-heading--char' >Hello There!</Char> <WaveIcon />  </div>
             <h1 className='hero__heading ' >
               <div className='heading1' ><span className='text' >I am a Front-End Developer</span></div>
-              <div className='heading1' ><span className='text' >& UI Designer who loves</span></div>
-              <div className='heading1' ><span className='text' ><span className='attention' >Coding</span> and <span className='attention' >Designing</span></span></div>
+              <div className='heading1' ><span className='text' >who loves crafting <span className='attention' >interactive</span>,</span></div>
+              <div className='heading1' ><span className='text' ><span className='attention' >responsive</span> and <span className='attention' >clean</span> web experiences.</span></div>
             </h1>
             <p className='hero__text content' >My Area of focus involves developing and designing responsive stunning websites that are as simple and easy to use as possible.</p>
             <div className='CTA' >
