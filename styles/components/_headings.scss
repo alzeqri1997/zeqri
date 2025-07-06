@@ -9,8 +9,8 @@
 
 .heading1{
   font-weight: 900;
-  font-size: 5rem;
-  line-height: 7rem;
+  font-size: 3.7rem;
+  line-height: 4.5rem;
 
   @include customBreakpoint('1200px'){
     font-size: 5rem;
