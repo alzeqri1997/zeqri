@@ -4,8 +4,9 @@ import Logo from './Logo'
 import {gsap} from 'gsap'
 import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
 
+
 const Header = () => {
-  
+  const resumeLink = "https://drive.google.com/file/d/1Pr18RWi79ppupcnQedNwtYMjSsc302Gj/view?usp=sharing"
   const [element, setElement] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   gsap.registerPlugin(ScrollToPlugin);
@@ -40,7 +41,7 @@ const Header = () => {
           <li ><button onClick={()=> setElement('#contact')} className='navs__nav-items--item btn'>Contact Me</button></li>
           <li ><button onClick={()=> setElement('#about')} className='navs__nav-items--item btn'>About</button></li>
         </ul>
-        <Button target="_blank" link="https://drive.google.com/file/d/171SnY2nYv-URHqUlh-xWiFe5-ILcOw5n/view?usp=share_link" rounded classes text={'Resume'} />
+        <Button target="_blank" link={resumeLink} rounded classes text={'Resume'} />
       </div>
       <div className='navs navs__mobile' >
         <button className='btn navs__mobile--menu' onClick={()=>handleMenu(true)} >
@@ -65,7 +66,7 @@ const Header = () => {
             <li ><button onClick={()=> setElement('#work')} className='navs__nav-items--item btn'>Projects</button></li>
             <li ><button onClick={()=> setElement('#contact')} className='navs__nav-items--item btn' href="#contact">Contact Me</button></li>
             <li ><button onClick={()=> setElement('#about')} className='navs__nav-items--item btn' href="#about">About</button></li>
-            <Button target="_blank" link="https://drive.google.com/file/d/171SnY2nYv-URHqUlh-xWiFe5-ILcOw5n/view?usp=share_link" rounded classes={'text-center'} text={'Resume'} />
+            <Button target="_blank" link={resumeLink} rounded classes={'text-center'} text={'Resume'} />
           </ul>
         </div>}
       </div>
