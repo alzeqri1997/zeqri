@@ -59,7 +59,6 @@ export default function Home() {
 					</div>
 				</div>
 
-				<WhatIDo />
 				<Projects />
 				<ContactMe />
 				<AboutMe />
