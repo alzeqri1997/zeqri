@@ -20,7 +20,6 @@ const Project = () => {
       <div className={`project ${imageRight ? 'left-side' : ''}`}>
         <Link target="_blank" className='project__img' href={link} >
           <Image src={image} alt={"project " + title}/>
-          {/* <img   /> */}
           <div className='project__img--overlay' ></div>
         </Link>
         <div className='project__content' >
