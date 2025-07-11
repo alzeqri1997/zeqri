@@ -30,7 +30,7 @@ export const projectDetails = [
     badge: "Web Development",
     title: "Ebana Website",
     body: `
-    <p>Ebana provides and operates equity management, investors relations, and investment operations digital solutions.</p>
+    <p>Ebana as a saudi company that provides and operates equity management, investors relations, and investment operations digital solutions.</p>
           <p>My role was bringing the figma design to real live website.</p>
           <p>Stack Used: <strong>Nextjs, TailwindCSS, and i18n</strong></p>
     `,
@@ -42,7 +42,7 @@ export const projectDetails = [
     title: "Ajras platform",
     body: `
     <p><strong>Ajras</strong> is A Saudi Propetech Company that provides solutions to make rental payment easier and simpler.</p>
-          <p>The Project contains <strong>landing page, User Panel, and super admin Panel.</strong></p>
+          <p>The Project contains <strong>landing page, user panel, and super admin panel.</strong></p>
           <p>My role was converting the design to <strong> real life website </strong></p>
           <p>Tech Stack Used: <strong>ReactJS, Vite, TailwindCSS, Typescript.</strong></p>
     `,

@@ -221,9 +221,8 @@ const Hero = () => {
               <div className='heading1' ><span className='text' >who loves crafting <span className='attention' >interactive</span>,</span></div>
               <div className='heading1' ><span className='text' ><span className='attention' >responsive</span> and <span className='attention' >clean</span> web experiences.</span></div>
             </h1>
-            <p className='hero__text content' >My Area of focus involves developing and designing responsive stunning websites that are as simple and easy to use as possible.</p>
+            <p className='hero__text content' >My Area of focus involves developing responsive websites or web apps that are as simple and easy to use as possible.</p>
             <div className='CTA' >
-              {/* <Button link='#contact' text={'Contact me'} /> */}
               <button onClick={() => setElement('#contact')} className='CTA__button'>Contact me</button>
               <div className='hero__icons' >
                 <Link target={'_blank'} href="https://www.behance.net/ahmedal-zagri">

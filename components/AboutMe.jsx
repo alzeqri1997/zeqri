@@ -1,8 +1,6 @@
-import Link from 'next/link'
-import React, {useRef, useLayoutEffect} from 'react'
-import myPic from '../assets/images/myPic.png'
+import {useRef, useLayoutEffect} from 'react'
 import Divider from './Divider'
-import { LinkedIn, Pattern2, Twitter } from './icons'
+import { Pattern2 } from './icons'
 import {gsap} from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Char from './Char'
@@ -78,23 +76,17 @@ const AboutMe = () => {
         <div className='container about-me' >
           <div className='about-me__content'>
             <h2 className='about-me__content--heading'><Char charClass='about-me__content--heading-char' >A Few Words About me</Char></h2>
-            <p className='about-me__content--text'>I’m <strong>Ahmed Al-zeqri</strong>, a freelance young and passionate <strong>developer</strong> & <strong>designer</strong> <br />
+            <p className='about-me__content--text'>I’m <strong>Ahmed Al-zeqri</strong>, a freelance young and passionate <strong>developer</strong> <br />
               who loves his work.</p>
             <br />
-            <p className='about-me__content--text'>As a web designer and developer, I believe good design is about finding the <br />
+            <p className='about-me__content--text'>As a web developer, I believe that a good website or web app is about finding the <br />
               right balance between aesthetic design and functionality. I aim to create <br />
-              beautiful, user-friendly designs to help my clients achieve their business goals. <br />
-              If you're looking for or <strong>Web Designer</strong> or <strong>Front End Developer</strong> who can help <br />
+              amazing and clean web experiences to help my clients achieve their business goals. <br />
+              If you're looking for or <strong>Frontend Developer</strong> who can help <br />
               you take your business to the next level, don't hesitate to get in touch. I can't <br />
-              wait to get started on your project!</p>
-            <div className='about-me__content--icons'>
-              <Link target='_blank' href="https://www.linkedin.com/in/alzeqri1997/"><LinkedIn/></Link>
-              <Link target='_blank' href="https://twitter.com/A_Zagri"><Twitter/></Link>
-              </div>
+              wait to get started on your project!
+            </p>
           </div>
-          <div className='about-me__image'>
-            <div className='about-me__image--overlay'></div>
-            <Image className='about-me__image-img'  src={myPic} alt="about me ahmed al-zeqri" /></div>
         </div>
       <Pattern2 classes={'right-pattern'} />
       <Pattern2 classes={'left-pattern'} />
