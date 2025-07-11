@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 import Button from './Button'
-import Logo from './Logo'
 import {gsap} from 'gsap'
 import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
 
@@ -33,7 +32,7 @@ const Header = () => {
   }, [element])
   return (
     <header className='header container' >
-      <div className='header__logo' > < Logo /> <span className='header__logo--text' >Zeqri</span>  </div>
+      <div className='header__logo' > <span className='header__logo--text' >ZEQRI</span>  </div>
 
       <div className='navs nav-desktop' >
         <ul className='navs__nav-items ' >
@@ -55,7 +54,7 @@ const Header = () => {
 
         { isMenuOpen && <div className='navs__mobile--items container'>
           <div className='navs__mobile--items-head' >
-            <div className='header__logo' > < Logo /> <span className='header__logo--text' >Zeqri</span>  </div>
+            <div className='header__logo' > <span className='header__logo--text' >ZEQRI</span>  </div>
             <button onClick={()=>handleMenu(false)} className='btn' ><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.51465 1.51471L18.4852 18.4853" stroke="#112240" strokeWidth="1.5" strokeLinecap="round" />
               <path d="M1.51465 18.4853L18.4852 1.51473" stroke="#112240" strokeWidth="1.5" strokeLinecap="round" />

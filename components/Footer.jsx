@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import React, { useRef, useLayoutEffect } from 'react'
-import Logo from './Logo'
+import { useRef, useLayoutEffect } from 'react'
 import { Behance, LinkedIn, Github, Twitter, Upwork } from './icons'
 import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
@@ -60,7 +59,6 @@ const Footer = () => {
   return (
     <footer ref={footer} className='container footer hidden'>
       <div className='footer__info' >
-        <div className='footer__info--logo' > < Logo /> <span className='footer__info--logo-text' >Zeqri</span>  </div>
         <div className='footer__info--icons' >
           <Link target={'_blank'} href="https://www.behance.net/ahmedal-zagri">
             <Behance />
