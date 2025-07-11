@@ -4,7 +4,6 @@ import { Pattern2 } from './icons'
 import {gsap} from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import Char from './Char'
-import Image from 'next/image'
 
 
 const AboutMe = () => {
@@ -21,12 +20,7 @@ const AboutMe = () => {
           trigger: '.about-me',
           start: 'top center',
         }
-      }).fromTo('.about-me__image-img',{
-        scale: 1.2,
-      }, {
-        scale: 1,
-        delay:0.1,
-      }, "<").fromTo('.about-me__content', {
+      }).fromTo('.about-me__content', {
         opacity: 0,
         x: -100,
       }, {
@@ -46,24 +40,7 @@ const AboutMe = () => {
         delay: 0.3,
         stagger: 0.1,
         x: 0
-      }, "-=.5").fromTo('.about-me__content--icons',{
-        opacity: 0,
-        x: -100,
-      }, {
-        opacity: 1,
-        x: 0
-      }, "-=.5").fromTo('.about-me__image', {
-        opacity: 0,
-        x: 100,
-      }, {
-        opacity: 1,
-        x:0
-      }, "<").to('.about-me__image--overlay', {
-        duration: 0.65,
-        delay: 0.1,
-        width: 0,
-        ease: "power2.out"
-      })
+      }, "-=.5")
     }, aboutMe)
     return () => ctx.revert()
   },[])

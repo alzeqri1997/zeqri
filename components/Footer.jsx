@@ -14,8 +14,7 @@ const Footer = () => {
   const footer = useRef();
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
-    const logo = footer.current.children[0].children[0];
-    const icons = footer.current.children[0].children[1].children;
+    const icons = footer.current.children[0].children[0].children;
     const line = footer.current.children[1];
     const copyright = footer.current.children[2];
     gsap.timeline({
@@ -30,12 +29,7 @@ const Footer = () => {
       opacity: 0,
     }, {
       opacity: 1,
-    }).fromTo(logo, {
-      delay: .2,
-      x: -100
-    }, {
-      x: 0
-    }, "<").fromTo(icons, {
+    }).fromTo(icons, {
       opacity: 0,
       x: 100
     }, {
