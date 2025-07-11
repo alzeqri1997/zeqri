@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // basePath:"/zeqri/"
+  reactStrictMode: true,
+  basePath:"/zeqri/"
 }
 
 module.exports = nextConfig
