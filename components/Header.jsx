@@ -2,10 +2,10 @@ import { useState, useEffect, useLayoutEffect } from 'react'
 import Button from './Button'
 import {gsap} from 'gsap'
 import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
+import { resumeLink } from '../constants'
 
 
 const Header = () => {
-  const resumeLink = "https://drive.google.com/file/d/1Pr18RWi79ppupcnQedNwtYMjSsc302Gj/view?usp=sharing"
   const [element, setElement] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   gsap.registerPlugin(ScrollToPlugin);
