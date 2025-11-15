@@ -9,6 +9,8 @@ import liquidus from "./assets/images/projects/LiquidusThumbnail.png";
 import ajars from "./assets/images/projects/ajars.png";
 import ebana from './assets/images/projects/Ebana.png'
 
+export const resumeLink = "https://drive.google.com/file/d/1bLuhzw-Zvupjl0lh7V5yM10T9yqg-cPf/view?usp=sharing"
+
 export const cards = [
   {
     imageSM: paintSM,

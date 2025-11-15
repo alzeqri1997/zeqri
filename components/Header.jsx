@@ -2,7 +2,7 @@ import { useState, useEffect, useLayoutEffect } from 'react'
 import Button from './Button'
 import {gsap} from 'gsap'
 import ScrollToPlugin from 'gsap/dist/ScrollToPlugin'
-import { resumeLink } from '../constants'
+import { resumeLink } from '../content'
 
 
 const Header = () => {

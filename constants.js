@@ -1,1 +1,0 @@
-export const resumeLink="https://drive.google.com/file/d/1MRbDw_0KdXiVKdKnpgVSfmz9P69JkbAH/view?usp=sharing"
