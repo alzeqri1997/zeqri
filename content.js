@@ -60,7 +60,7 @@ export const projectDetails = [
           <p>My role was building the <strong>provider dashboard.</strong></p>
           <p>Tech Stack Used: <strong>HTML, CSS(SCSS), Javascript ( VueJS ), Bootstrap, VueX.</strong></p>
     `,
-    link: "https://halabk.sa/en/",
+    link: "https://effulgent-cactus-d65b51.netlify.app/",
   },
   {
     image: liquidus,
